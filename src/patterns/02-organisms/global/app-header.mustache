@@ -1,0 +1,78 @@
+<header class="app-header">
+  <div class="app-header__section-a">
+    <div class="container">
+      <div class="app-header__section-a-inner">
+        <a href="#" class="logo-main">
+          <img class="logo-main__img" src="../../images/logo-folger-shakespeare-library.svg" alt="Folger">
+        </a>
+          {{#isLogged}}
+            <div class="dropdown dropdown-profile">
+              <button class="btn dropdown-toggle dropdown-profile__toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                {{> atoms-svg(id:'icon-user', width:'17', height:'17', class:'u-mr-2 u-mb-1')}}
+                USERNAME
+                {{> atoms-svg(id:'arrow-down-1', width:'8', height:'8', class:'u-ml-2')}}
+              </button>
+              <div class="dropdown-menu dropdown-menu-right dropdown-profile__menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Edit my profile</a>
+                <a class="dropdown-item" href="/logout"  data-remote-logout-url="https://server.staging.collections.folger.edu/logout">Logout</a>
+              </div>
+            </div>
+          {{/isLogged}}
+          {{^isLogged}}
+            <div>
+              <a class="u-text-light u-mr-2" href="#">Login</a> | <a class="u-text-light u-ml-2" href="#">Sing up</a>
+            </div>
+          {{/isLogged}}
+      </div>
+    </div>
+  </div>
+  <div class="app-header__section-b">
+    <div class="container">
+      <div class="nav-bar">
+        <div class="nav-bar__logo">
+          <img src="../../images/logo-miranda-beta.svg" alt="Logo Miranda">
+        </div>
+        <div class="nav-bar__myshelf count-myshelf">
+          <a href="#" class="myshelf-button">
+            MY SHELF
+            <svg class="myshelf-button__icon">
+              <use xlink:href="#icon-shelf" />
+            </svg>
+            <span data-url="../../ajax/myshelf/allitems.json" class="myshelf-button__count d-none" title="Add to Compendium" id="myshelf-count-badge"></span>
+          </a>
+        </div>
+        <nav class="nav-bar__menu">
+          <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">BEHIND THE SCENES</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <div class="app-header__section-c">
+    <div class="container">
+      You are viewing the <a href="https://www.folger.edu/online-resources/digital-asset-platform">Miranda Prototype</a>.
+    </div>
+  </div>
+</header>
+
+<!-- Modal -->
+<div class="modal fade" id="ModalClearShelf" tabindex="-1" role="dialog" aria-labelledby="ModalClearShelf" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Empty your shelf?</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger btn-modal" data-dismiss="modal">Yes</button>
+        <button type="button" class="btn btn-secondary btn-modal" data-dismiss="modal">No</button>
+      </div>
+    </div>
+  </div>
+</div>

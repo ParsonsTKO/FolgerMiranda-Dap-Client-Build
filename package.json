@@ -1,0 +1,52 @@
+{
+  "name": "folgerdap-client-frontend",
+  "version": "0.0.0-semantic-release",
+  "description": "FolgerDAP Client Frontend",
+  "main": "README.md",
+  "homepage": "https://bitbucket.org/ptko/dap-client-builds",
+  "repository": {
+    "type": "git",
+    "url": "git@bitbucket.org:ptko/dap-client-builds.git"
+  },
+  "author": "Folger",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {},
+  "devDependencies": {
+    "babel-cli": "^6",
+    "babel-core": "^6",
+    "babel-preset-env": "^1",
+    "bootstrap-styl": "~5",
+    "browser-sync": "^2",
+    "del": "^2",
+    "gulp": "^4",
+    "gulp-autoprefixer": "^4",
+    "gulp-babel": "^7",
+    "gulp-clean-css": "*",
+    "gulp-concat": "*",
+    "gulp-csslint": "^1",
+    "gulp-cssnano": "*",
+    "gulp-rename": "*",
+    "gulp-sass": "^3",
+    "gulp-sass-lint": "*",
+    "gulp-sourcemaps": "^2",
+    "gulp-stylint": "^4",
+    "gulp-stylus": "^2",
+    "gulp-uglify": "*",
+    "minimist": "^1.2",
+    "patternlab-node": "~2",
+    "patternlab-starterkit-mustache": "*"
+  },
+  "scripts": {
+    "start": "npx gulp serve",
+    "bundle": "npx gulp bundle",
+    "gulp": "npx gulp",
+    "installkit": "npx gulp patternlab:loadstarterkit --kit=patternlab-starterkit-mustache",
+    "compile": "npx gulp compile",
+    "test": "echo \"Not implemented yet\""
+  },
+  "engines": {
+    "node": "~10",
+    "npm": "~6"
+  }
+}

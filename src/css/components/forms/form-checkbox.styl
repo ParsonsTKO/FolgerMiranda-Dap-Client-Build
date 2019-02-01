@@ -1,0 +1,22 @@
+.form-checkbox
+  raw-input()
+  size(em(18, $font-size-base), em(18, $font-size-base))
+  align-self: center
+  flex-shrink: 0
+  display inline-block
+  margin-right: em(7)
+  background-repeat no-repeat
+  background-position -100% center
+  border: 2px solid $color-border
+  border-radius 2px
+  vertical-align middle
+  cursor pointer
+  &:checked
+    background-color $color-border
+    background-position center
+    background-image url("data:image/svg+xml,%3Csvg width='12' height='9' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.286 8.571a.778.778 0 0 1-.6-.257L.257 4.886a.829.829 0 0 1 0-1.2.829.829 0 0 1 1.2 0l2.829 2.828L10.543.257a.829.829 0 0 1 1.2 0 .829.829 0 0 1 0 1.2L4.886 8.314a.778.778 0 0 1-.6.257z' fill='%23FFF' fill-rule='nonzero'/%3E%3C/svg%3E")
+
+  & + label,
+  & ~ label
+    cursor pointer
+    

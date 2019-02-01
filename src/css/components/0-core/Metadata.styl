@@ -1,0 +1,32 @@
+.Metadata
+  display: block
+  position: relative
+
+  &-label
+    margin: 0
+    padding: 0
+    color: inherit
+    font-size: em(12)
+    text-transform: uppercase
+    letter-spacing: 1px
+    font-weight: 600
+
+    &.label__fist
+      margin: rem(0) rem(10) rem(0) rem(0)
+
+  &-value
+    font-size: em(14)
+
+  &-select
+    raw-input()
+    display: block
+    width: 130%
+    margin: rem(-25) rem(-20) rem(-10)
+    padding: rem(25) rem(20) rem(10)
+    background-image: url($icon-arrow-triangle-down)
+    background-repeat: no-repeat
+    background-size: 11px
+    background-position: 93% center
+
+  &.FormGroup__timeRange
+    margin-bottom: rem(0)

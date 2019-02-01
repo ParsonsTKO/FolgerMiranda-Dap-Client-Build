@@ -1,0 +1,25 @@
+.breadcrumb-myshelf
+  background-color: unset
+  padding: 0
+
+  > li,
+  > li
+    font-size: em(24)
+    font-weight: bold
+    &.active
+      color: black
+    a
+      color: $color-border
+
+    & + li::before
+      position: relative
+      content: ""
+      display: inline-block
+      width: rem(12)
+      height: rem(12)
+      border-right: rem(3) solid black
+      border-top: rem(3) solid black
+      transform: rotate(45deg)
+      margin-right: em(10)
+      margin-left: em(9)
+      top: em(-2)

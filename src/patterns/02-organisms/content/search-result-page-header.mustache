@@ -1,0 +1,9 @@
+<div class="page-header">
+  <div class="container">
+    <h1 class="page-header__heading text-center">You current search for “Hamlet”</h1>
+    {{> molecules-revealer-button(label: 'CHANGE SEARCH', targetId: 'search-form') }}
+    <div id="search-form" class="block-search" style="display: none">
+      {{> organisms-advanced-search-form(variantB: true) }}
+    </div>
+  </div>
+</div>

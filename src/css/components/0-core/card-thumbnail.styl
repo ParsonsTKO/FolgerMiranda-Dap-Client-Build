@@ -1,0 +1,50 @@
+.card-thumbnail
+	display block
+	position: relative
+	color: white
+	overflow: hidden
+	&:hover,
+	&:focus
+		&:after
+			opacity: .8
+		& ^[0]
+			&__image
+				transform: scale(1.1)
+	&:after
+		transition: opacity .21s ease-in-out
+		opacity .38
+		absolute(0, 0, 0, 0)
+		content: ''
+		background: linear-gradient(-180deg, rgba(black, .14), black)
+
+	&__image
+		transition: transform 4s ease
+		absolute(0, null, null, 0)
+		size(auto, auto, 100%, 100%, 1000%, 1000%)
+
+	&__content
+		position: relative
+		text-align: center
+		z-index: 2
+		a
+			display: flex
+			min-height: rem(225)
+			padding: rem(50) rem(30)
+			flex-flow: column
+			align-items: center
+			justify-content: center
+			color: inherit
+			&:hover,
+			&:focus
+				text-decoration: none
+				color: inherit
+		
+	&__icon
+		--color-icon: white
+		size(rem(36), rem(36))
+		margin-bottom: rem(28)
+
+	&__title
+		font-size: rem(24)
+		color: inherit
+		font-weight 700

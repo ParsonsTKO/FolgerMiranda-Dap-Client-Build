@@ -1,0 +1,165 @@
+.card-media
+  position: relative
+  display: flex
+  flex-direction: column
+  background-color: $color-neutral-b
+  border: 1px solid #C9C9C9
+  +media-mobile-l('larger')
+    flex-direction: row
+
+  &__image-alt
+    position: absolute
+    display flex
+    max-width em(70)
+    max-height em(97)
+    margin: em(30) 0 em(30) em(30)
+    text-decoration none
+    overflow hidden
+    +media-tablet()
+      flex-shrink 0
+      position relative
+      max-width em(110)
+      max-height em(153)
+    img
+      size(auto, auto, 100%, 100%, 1000%, 1000%)
+
+  &__icon
+    position: absolute
+    margin: em(30) 0 em(30) em(30);
+    --color-icon: $color-terciary-c
+    +media-tablet()
+      position relative
+      flex-shrink 0
+      
+  &__image
+    width: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    overflow: hidden
+    img
+      size(auto, auto, 100%, 100%, 1000%, 1000%)
+      flex-shrink: 0
+
+  &__content
+    flex-grow 1
+    display flex
+    flex-wrap: wrap
+    align-content: flex-start
+    align-items: flex-start
+    justify-content: space-between
+    padding: em(30)
+  
+  &__title
+    width: 100%
+    margin-bottom: rem(18)
+    padding-bottom: rem(15)
+    border-bottom: 1px solid $color-border-secondary
+    font-family: $font-family-base
+    font-size: rem(26)
+    font-weight: bold
+    a
+      color: inherit
+
+  &.has-icon
+    .card-media
+      &__title
+        padding-left: em(50, 26)
+        +media-tablet()
+          padding-left: 0
+  &.is-single
+    .card-media
+      &__title
+        padding-left: em(97, 26)
+        min-height: em(97 + 15, 26)
+        +media-tablet()
+          padding-left: 0
+          min-height: auto
+  
+  &__desc
+    width 100%
+    margin-bottom: em(15)
+    line-height: 1.6
+    +media-tablet()
+      width 62%
+    p
+      &:last-child
+        margin-bottom: 0
+  
+  &__actions
+    width 100%
+    display: inline-flex
+    +media-tablet()
+      width auto
+      margin-left: em(15)
+      display flex
+      flex-direction column
+      align-items: flex-end
+  
+  &__action
+    display: flex
+    align-items: center
+    margin-right: rem(15)
+    margin-bottom: rem(5)
+    font-weight: bold
+    &:last-child
+      margin-right: 0
+    +media-tablet()
+      margin-right: 0
+    svg
+      margin-left: rem(8)
+      --color-icon: $color-secondary
+
+  .metadata
+    +media-tablet()
+      display flex
+      margin-bottom: em(3)
+    &__title
+      font-size: 1em
+      +media-tablet()
+        width: 100%
+        flex-grow 1
+        margin-right: em(30)
+        flex-shrink: 2
+    &__desc
+      font-size: 1em
+      +media-tablet()
+        width: 100%
+        flex-grow 2
+    
+    &.is-wide-right
+      .metadata__title
+        +media-tablet()
+          width: em(150)
+          margin-right: em(15)
+          flex-shrink: 0
+
+  &__tag
+    absolute(0, 0)
+    size(em(150), em(40))
+    content:'Viewable Online'
+    display: flex
+    align-items: center
+    justify-content: center
+    font-size: em(15)
+    font-weight: 500
+    background-color: #40414C
+    color: white
+    +device-medium()
+      size(em(150), em(35))
+    +device-small()
+      size(em(140), em(30))
+
+  &.is-embedded
+    background-color: #FBFBFB
+    border: 0
+    border-bottom: 1px solid $color-border
+    
+    & ^[0]
+      &__title
+        font-size: em(18)
+        padding-bottom: em(10) 
+      &__content
+        padding: em(17) em(30) em(30)
+      &__desc
+        width: 100%

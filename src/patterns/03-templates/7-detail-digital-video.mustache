@@ -1,0 +1,131 @@
+{{> organisms-app-header }}
+{{> organisms-single-page-header(pageTitle: 'Tragedy of Hamlet Prince of Denmark.') }}
+<div class="page-body">
+  <div class="container">
+    <div id="page-topbar" class="row u-mb-8">
+      <div class="col-md-12">
+        <div class="page-actions is-row">
+          <a href="#" class="button is-lspaced is-bare">
+            {{> atoms-svg(id: 'icon-add-to-shelf', width: '24', height: '24') }} ADD TO SHELF
+          </a>
+          <a href="#" class="button is-lspaced is-bare">
+            {{> atoms-svg(id: 'icon-share', width: '24', height: '24') }} SHARE
+          </a>
+        </div>
+        <hr>
+      </div>
+    </div>
+    <div id="page-body" class="row">
+      <aside id="record-metadata" class="page-side col-md-3">
+        {{> organisms-metadata(label: 'Creator', value: 'Shakespeare, William, 1564-1616') }}
+        {{> organisms-metadata(label: 'Date', value: 'Jul 18 2016') }}
+        {{> organisms-metadata(label: 'Location', value: 'Paster Reading Room, Folger Shakespeare Library, Washington, DC, United States') }}
+        {{> organisms-metadata(label: 'Media format', value: 'Video') }}
+        {{> organisms-metadata(label: 'Extent', value: '1 video', tooltip: true) }}
+        <hr>
+        {{> organisms-metadata(label: 'Language', value: 'English') }}
+        {{> organisms-metadata(label: 'Holding institution', value: 'Folger Shakespeare Library') }}
+        {{> organisms-metadata(label: 'License', value: 'CC BY-SA 4.0') }}
+        {{> organisms-metadata(label: 'Genre', value: 'Commentary') }}
+      </aside>
+      <main class="col-md-8 mr-auto">
+        <h4 class="subtitle u-mb-3">Media</h4>
+        <div class="player is-video">
+          <video controls>
+            <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+          </video>
+        </div>
+        <section id="record-notes" class="u-mb-14">
+          {{> organisms-metadata(label: 'Reference IDs', value: 'YouTube number: mZSPj27NJAo') }}
+          {{> organisms-metadata(label: 'Summary', value: 'Actor Kal Penn has always felt a special bond with Shakespeare - after all, they share a birthday. From The Wonder of Will, April 23, 2016, from the Paster Reading Room of the Folger Shakespeare Library. Share your Shakespeare story! More details at http://www.folger.edu/myshx400.') }}
+          <div class="metadata">
+            <h5 class="metadata__title">Also known as</h5>
+            <div class="metadata__desc">
+              <p>
+                Alternate title: #MySHX400 <br>
+                Alternate title: Kal Penn
+              </p>
+            </div>
+          </div>
+          <div class="metadata">
+            <h5 class="metadata__title">Related names</h5>
+            <div class="metadata__desc">
+              <p>
+                Appreciation of: Shakespeare, William <br>
+                Performed by: Kal Penn
+              </p>
+            </div>
+          </div>
+          {{> organisms-metadata(label: 'Related materials', value: 'Folger website about #MySHX400: http://www.folger.edu/myshx400') }}
+          {{> organisms-metadata(label: 'Related locations', value: 'Published in: Washington (D.C.)') }}
+          {{> organisms-metadata(tooltip: true, label: 'How to cite', value: 'Uniform title url, Folger Shakespeare Library, viewed date') }}
+          {{> organisms-metadata(label: 'Related names', value: 'Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin.') }}
+          {{> organisms-metadata(label: 'Related materials', value: 'Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras.') }}
+          {{> organisms-metadata(label: 'Transcription', value: 'Curabitur lobortis id lorem id bibendum. Ut id consectetur magna. Quisque volutpat augue enim, pulvinar lobortis nibh lacinia at. Vestibulum nec erat ut mi sollicitudin porttitor id sit amet ') }}
+          <div class="metadata">
+            <h5 class="metadata__title">Associated with</h5>
+            <div class="metadata__desc">
+              <p>
+                #MySHX400<br>
+                My Shakespeare Story
+              </p>
+            </div>
+          </div>
+          <div class="metadata">
+            <h5 class="metadata__title u-mb-2">Transcription</h5>
+            <div class="metadata__desc">
+              <p>
+                00:00<br>
+                thank you if there's something everyone<br>
+                00:04<br>
+                knows about actors we are impulsive and<br>
+                00:06<br>
+                irrational I'm sure psychologists have a<br>
+                00:08<br>
+                term for this but the most common<br>
+                00:09<br>
+                phraseology is actors actors are crazy<br>
+                00:12<br>
+                and as every report card that I've ever<br>
+                00:14<br>
+                had like to point out to my poor parents<br>
+                00:16<br>
+                we are quick to speak before we think<br>
+                00:18<br>
+                for the most part I knew I wanted to be<br>
+                00:21<br>
+                an actor because I loved the power of<br>
+                00:23<br>
+                storytelling from a very young age
+              </p>
+            </div>
+          </div>
+          <div class="metadata">
+            <h5 class="metadata__title">File information</h5>
+            <div class="metadata__desc">
+              <p>
+                Duration: 5:46<br>
+                [not sure how we're using the rest of this field]
+              </p>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <hr class="u-mb-7">
+    <div id="related-articles" class="row">
+      <div class="col-md-12">
+        <aside>
+          <section class="related-articles">
+            <h2 class="related-articles__title text-center">See more on Miranda</h2>
+            <div class="related-articles__links">
+              <a class="button is-rounded is-alt-secondary is-outstanding" href="#">Start a new search <span>&nbsp;&nbsp;›</span></a>
+            </div>
+          </section>
+        </aside>
+      </div>
+    </div>
+  </div>
+</div>
+{{> organisms-app-footer }}

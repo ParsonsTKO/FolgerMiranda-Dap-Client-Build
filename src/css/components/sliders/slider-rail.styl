@@ -1,0 +1,18 @@
+.slider-rail
+  padding: 0 em(26)
+  &__slide 
+    height auto
+    display: flex
+    justify-content: center
+    align-items: strech 
+    padding: 0 em(28)
+
+  &__prev,
+  &__next
+    --color-icon: #111111
+    raw-button()
+    background: transparent
+    transform: translateY(-50%)
+    &.swiper-button-disabled
+      opacity .14
+    

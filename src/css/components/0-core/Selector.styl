@@ -1,0 +1,52 @@
+.Selector
+  display: block
+  padding: rem(6) rem(6)
+
+  &__mediaType
+    display: flex
+    flex-direction: row
+    justify-content: center
+    background: white
+    border: 1px solid #E7E7E7
+    border-radius: 2px
+    box-shadow: 0 8px 20px 0 rgba(0, 0, 0, .10)
+
+    & ^[0]
+      &-item
+        size(100 / 5 * 100%, rem(118))
+        position: relative
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        position: relative
+        padding: 0 rem(11)
+        text-align: center
+        cursor: pointer
+        border-radius: 2px
+        click-effect-a()
+        &:hover
+          background: $color-neutral-a
+
+        &.is-active
+          background: $color-success-button
+          color: white
+          &:before
+            @extend .icon
+            absolute(rem(8), null, null, rem(10))
+            content: icon-check-circle
+            font-size: rem(21.5)
+
+      &-icon
+        display: block
+        text-align: center
+        font-size: rem(28)
+        margin-bottom: rem(10)
+        &__default
+          font-size: rem(21)
+          font-weight: bold
+
+      &-label
+        display: block
+        font-size: rem(13)
+        color: inherit

@@ -1,0 +1,21 @@
+.form-select
+	raw-input()
+	display block
+	width: 100%
+	padding: em(15, 22) em(40, 22) em(15, 22) em(20, 22)
+	background-color: white
+	background-image: url("data:image/svg+xml,%3Csvg width='16' height='10' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16 1.88l-8 8-8-8L1.88 0 8 6.107 14.12 0z' fill='%239B9B9B' fill-rule='nonzero'/%3E%3C/svg%3E");
+	background-repeat no-repeat
+	background-position right em(20, 22) center
+	background-size em(16, 22) em(10, 22)
+	font-weight 700
+	color: $color-base
+	&:focus
+		background-color: white
+
+	&.is-small
+		font-size: em(14)
+
+	&.is-inline
+		display inline-block
+		width: auto

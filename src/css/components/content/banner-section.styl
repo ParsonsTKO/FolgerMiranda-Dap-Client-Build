@@ -1,0 +1,40 @@
+.banner-section
+  position relative
+  padding: 5.5vh 0 rem(60)
+  background-color: black
+  color: white
+  --color-icon: white
+  overflow hidden
+  transition: all .21s ease-in-out
+
+  &__image
+    animation reveal 7s ease
+    animation-fill-mode forwards
+    absolute(0, 0, null, 0)
+    z-index 1
+    img
+      width: 100%;
+      height auto
+      transform: scale(1.1, 1.1)
+
+  &__content
+    position relative
+    z-index 2
+
+  &__heading
+    $fs = 25
+    margin-bottom: em(13, $fs)
+    font-family: $font-family-display
+    font-size: em($fs)
+    text-align: center
+    text-shadow: 0 0 rem(9) rgba(black, .5)
+    +media-tablet()
+      font-size: em(40)
+    +media-laptop()
+      font-size: em(50)
+
+  .button-revealer
+    margin: rem(25) auto rem(25)
+
+  .block-advanced-search
+    margin-top: rem(70)

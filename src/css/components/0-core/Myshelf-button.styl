@@ -1,0 +1,30 @@
+.myshelf-button
+  raw-button()
+  display: flex
+  position: relative
+  align-items: center
+  font-size: rem(18)
+  color: inherit
+  text-transform: uppercase
+  letter-spacing: 1px
+  font-weight 700
+  &:hover,
+  &:focus
+    text-decoration: none
+    color: inherit
+  
+  &__count
+    absolute(rem(-3), rem(-10))
+    size(rem(25), rem(25))
+    display: flex
+    justify-content: center
+    align-items: center
+    border-radius: 100%
+    font-size: rem(12)
+    background-color: $color-secondary
+    box-shadow: 0 2px 4px 0 rgba(black, .5);
+
+  &__icon
+    --color-icon: #7A7B87
+    margin-left: rem(15)
+    size(rem(40), rem(35))

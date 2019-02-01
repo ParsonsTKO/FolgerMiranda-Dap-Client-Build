@@ -1,0 +1,34 @@
+<div class="modal modal-flat fade" id="{{id}}" tabindex="-1" role="dialog" aria-labelledby="TitleModal{{title}}" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content modal-flat__content">
+      <form id="{{formId}}" name="{{titleModal}}" action="/ajax/myshelf/addfolder/error.json" method="POST">
+        <div class="modal-header modal-flat__header">
+          {{#titleModal}}
+            <h4 class="modal-title" id="TitleModal{{titleModal}}">{{titleModal}}</h4>
+          {{/titleModal}}
+        </div>
+        <div class="modal-body modal-flat__body">
+          {{^isModalCreate}}
+            {{#text}}
+              <div class="text-center">
+                {{{text}}}
+              </div>
+            {{/text}}
+          {{/isModalCreate}}
+          {{#isModalCreate}}
+            <input type="text" name="tagname" placeholder="Folder Name" class="form-field">
+          {{/isModalCreate}}
+        </div>
+
+        <div class="modal-footer modal-flat__footer justify-content-center">
+          {{#labelBtnCancel}}
+          <button class="button is-medium is-deflated-md is-alt-secondary" type="button" class="btn btn-secondary" data-dismiss="modal">{{labelBtnCancel}}</button>
+          {{/labelBtnCancel}}
+          {{#labelBtnSuccess}}
+          <button type="{{#isModalCreate}}submit{{/isModalCreate}}{{^isModalCreate}}button{{/isModalCreate}}" class="button is-medium is-deflated-md is-secondary btn btn-primary">{{labelBtnSuccess}}</button>
+          {{/labelBtnSuccess}}
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

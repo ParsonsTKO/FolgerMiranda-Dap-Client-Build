@@ -1,0 +1,19 @@
+.page-actions
+  display flex
+  justify-content stretch
+  font-size: em(13)
+  +media-tablet()
+    font-size: 1em
+  > *
+    margin-right em(30)
+    &:last-child
+      flex-grow 1
+      display flex
+      justify-content flex-end
+      margin-right 0
+  
+  &.is-row
+    justify-content: flex-start
+    > *
+      &:last-child
+        flex-grow: 0

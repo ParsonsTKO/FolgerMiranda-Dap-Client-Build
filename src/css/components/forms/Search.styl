@@ -1,0 +1,52 @@
+.Search
+  display: block
+  position: relative
+
+  &__tiny
+    &::before
+      @extend .icon
+      absolute(9px, null, null, 10px)
+      content: icon-search
+      font-size: 12px
+      color: $color-base
+    & ^[0]
+      &-input
+        raw-input()
+        width: 100%
+        display: block
+        padding: 5px 10px 5px 30px
+        background: white
+        border: 1px solid $color-border
+        border-radius: 4px
+        font-size: 14px
+        &:focus
+          background: white
+
+  &__display
+    relative()
+
+    & ^[0]
+      &-field
+        raw-input()
+        display: block
+        width: 100%
+        padding: rem(16) rem(65) rem(19) rem(28)
+        background-color: white
+        border: 1px solid transparent
+        border-radius: 4px
+        font-size: rem(18)
+        color: $color-base
+        &:focus
+          background-color: white
+          border: 1px solid $color-border
+
+      &-submit
+        raw-button()
+        absolute(0, 0, 0)
+        padding: rem(20) rem(23)
+        background: transparent
+        color: #CBCBCB
+        font-size: rem(20)
+        border-radius: 4px
+        z-index: 1
+        click-effect-a()

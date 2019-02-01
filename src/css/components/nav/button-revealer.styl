@@ -1,0 +1,29 @@
+.button-revealer
+  $fs = 16
+  raw-button()
+  display: flex
+  align-items: center
+  font-size: em($fs)
+  text-align center
+  letter-spacing: 2px
+  cursor: pointer
+  font-weight 600
+  +media-tablet()
+    $fs = 20
+    font-size: em($fs)
+  
+  svg
+    size(em(13, $fs), em(12, $fs))
+    margin-left: em(16, $fs)
+    --color-icon: white
+  
+  &__arrow-up
+    visibility hidden
+  
+  &.is-active
+    & ^[0]
+      &__arrow-up
+        visibility visible
+      &__arrow-down
+        visibility hidden
+

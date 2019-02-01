@@ -1,0 +1,17 @@
+.article-features
+  $fs = 24
+  font-size: rem($fs)
+  &__heading
+    $fs = 28
+    font-size: rem($fs)
+    margin-bottom: 1.38em
+
+  &__grid
+    +media-mobile-l('larger')
+      display flex
+      flex-wrap: wrap
+      justify-content: space-between
+    > *
+      margin 0 0 rem(30)
+      +media-mobile-l('larger')
+        width 48.5%

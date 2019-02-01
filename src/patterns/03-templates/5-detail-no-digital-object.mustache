@@ -1,0 +1,67 @@
+{{> organisms-app-header }}
+{{> organisms-single-page-header(pageTitle: 'Utriusque cosmi maioris scilicet et minoris metaphysica.') }}
+<div class="page-body">
+  <div class="container">
+    <div id="page-topbar" class="row">
+      <div class="col-md-12">
+        <div class="page-actions is-row">
+          <a href="#" class="button is-lspaced is-bare">
+            {{> atoms-svg(id: 'icon-add-to-shelf', width: '24', height: '24') }} ADD TO SHELF
+          </a>
+          <a href="#" class="button is-lspaced is-bare">
+            {{> atoms-svg(id: 'icon-share', width: '24', height: '24') }} SHARE
+          </a>
+        </div>
+        <hr>  
+      </div>
+    </div>
+    <main id="page-body">
+      <div class="grid-metadata u-mb-10 u-mt-5">
+        {{> organisms-metadata(label: 'Creator', value: 'Shakespeare, William, 1564-1616') }}
+        {{> organisms-metadata(label: 'Date', value: '1909') }}
+        {{> organisms-metadata(label: 'Media format', value: 'Printed text') }}
+        {{> organisms-metadata(label: 'Location', value: 'Coulommiers. France') }}
+        {{> organisms-metadata(label: 'Call Number', value: 'N/A') }}
+        {{> organisms-metadata(label: 'Physcial Description', value: 'Souvenir promptbook') }}
+        {{> organisms-metadata(label: 'Extent', value: '172 p', tooltip: true) }}
+        {{> organisms-metadata(label: 'Language', value: 'English') }}
+      </div>
+      <div class="row u-mb-9">
+        <div class="col-md-8 mr-auto">
+          {{> organisms-metadata(label: 'Citacion', value: 'Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum rutrum, neque sem pretium metus, quismollis nisl nunc et massa. Vestibul.') }}
+          <div class="metadata">
+            <h5 class="metadata__title">Notes</h5>
+            <div class="metadata__desc">
+              <h6 class="u-fontSize-xmedium u-mb-2">Note Label 1</h6>
+              <p>
+                Curabitur lobortis id lorem id bibendum. Ut id consectetur magna. Quisque volutpat augue enim, pulvinar lobortis nibh lacinia
+                at. Vestibulum nec erat ut mi sollicitudin porttitor id sit amet risus. Nam tempus vel odio vitae aliquam. In imperdiet eros
+                id lacus vestibulum vestibulum.
+              </p>
+              <h6 class="u-fontSize-xmedium u-mb-2">Note Label 2</h6>
+              <p>
+                Curabitur lobortis id lorem id bibendum. Ut id consectetur magna. Quisque volutpat augue enim, pulvinar lobortis nibh lacinia
+                at. Vestibulum nec erat ut mi sollicitudin porttitor id sit amet risus. Nam tempus vel odio vitae aliquam. In imperdiet eros
+                id lacus vestibulum vestibulum.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <hr class="u-mb-10">
+    <div id="related-articles" class="row">
+      <div class="col-md-12">
+        <aside>
+          <section class="related-articles">
+            <h2 class="related-articles__title text-center">See more on Miranda</h2>
+            <div class="related-articles__links">
+              <a class="button is-rounded is-alt-secondary is-outstanding" href="#">Start a new search <span>&nbsp;&nbsp;›</span></a>
+            </div>
+          </section>
+        </aside>
+      </div>
+    </div>
+  </div>
+</div>
+{{> organisms-app-footer }}

@@ -1,0 +1,16 @@
+.Pagination
+  text-align: center
+  ul
+    @extend .pagination
+    pagination-size(rem(14), rem(15), rem(18), 1, 0)
+    li
+      display: inline-block
+      margin: 0 rem(5)
+      &.is-disabled
+        @extend .pagination > .disabled
+      a, a:hover
+        color: inherit
+        border: 1px solid $color-base
+      a:hover
+        background-color: $color-base
+        color: white

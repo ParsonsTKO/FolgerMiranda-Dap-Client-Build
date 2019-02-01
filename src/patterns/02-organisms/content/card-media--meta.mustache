@@ -1,0 +1,24 @@
+<article class="card-media{{#icon}} has-icon{{/icon}}{{^icon}} is-single{{/icon}}">
+  {{#isOnline}}<span class="card-media__tag">Viewable Online</span>{{/isOnline}}
+  {{#icon}}
+  <svg class="card-media__icon" width="{{iconWidth}}" height="{{iconHeight}}"><use xlink:href="#{{icon}}"/></svg>
+  {{/icon}}
+  {{^icon}}
+  <a href="#" class="card-media__image-alt">
+    <img src="https://via.placeholder.com/110x153" alt="Placeholder image">
+  </a>
+  {{/icon}}
+  <div class="card-media__content">
+    <h4 class="card-media__title">
+      <a href="#">{{title}}</a>
+    </h4>
+    <div class="card-media__desc">
+      {{> organisms-metadata(label: 'Creator', value: 'Shakespeare, William, 1564-1616  http://id.loc.gov/authorities/names/n78095332') }}
+      {{> organisms-metadata(label: 'Date', value: '1909') }}
+      {{> organisms-metadata(label: 'Media Format', value: 'Printed text') }}
+      {{> organisms-metadata(label: 'Location', value: 'lorem ipsum it') }}
+      {{> organisms-metadata(label: 'Call Number', value: 'PM8285.S53H11 1909 Sh.Col.') }}
+    </div>
+    {{> organisms-card-media-actions }}
+  </div>
+</article>

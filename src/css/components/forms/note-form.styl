@@ -1,0 +1,42 @@
+.note-form
+  width: 100%
+  padding: em(15) em(20)
+  border: 1px solid #BABABA
+  background-color: white
+  
+  &__inner
+    display: flex
+    flex-direction: column
+    
+    button, a
+      display: inline-block
+      padding: 0
+      font-size: em(15)
+      font-weight: 600
+      background: none 
+      color: $color-secondary 
+      border: 0
+      &:hover
+        text-decoration: none
+        opacity: .8
+      
+  &__note
+    padding: 0
+    margin: 0
+    height: auto
+    min-height: em(20)
+    background-color: inherit
+    border: 0
+    border-radius: 0
+    overflow: hidden
+    &::placeholder
+      color: $color-base
+  
+    + .note-form__actions
+      margin-top: em(10)
+
+  &__actions
+    display: none
+
+    &.is-active
+      display: block

@@ -1,0 +1,71 @@
+.result-records
+  display flex
+  flex-direction column
+  flex-wrap: wrap
+  align-items: stretch
+  margin-left: em(-10)
+  margin-right: em(-10)
+
+  > *
+    width: 100%
+    margin-bottom: em(20)
+    padding-left: em(10)
+    padding-right: em(10)
+    transition all .21s ease
+
+  &__featured
+    align-self: flex-start !important;
+    display block !important
+    width: 100% !important
+
+  &.is-grid
+    flex-direction row
+
+    > *
+      display flex
+      +media-tablet()
+        width: 50%
+      +media-laptop()
+        width: 33.333%
+
+    .card-media
+      &.is-single,
+      &.has-icon
+        .card-media
+          +media-tablet()
+            &__image-alt
+              position: absolute
+              max-width em(70)
+              max-height em(97)
+            &__icon
+              position: absolute
+              margin: em(30) 0 em(30) em(30)
+            &__content
+              align-content: stretch
+            &__title
+              font-size: em(18)
+              padding-left: em(50, 26)
+            &__desc
+              width 100%
+            &__actions
+              width 100%
+              display: flex
+              flex-direction row
+              flex-wrap: wrap
+              align-self: flex-end
+              margin-left: 0
+            &__action
+              margin-right: rem(15)
+              &:last-child
+                margin-right: 0
+        .metadata
+          +media-tablet()
+            display block
+            margin-bottom: em(10)
+      &.is-single
+        .card-media
+          +media-tablet()
+            &__title
+              padding-left: em(115, 26)
+              min-height: em(97)
+    

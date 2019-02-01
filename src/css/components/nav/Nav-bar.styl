@@ -1,0 +1,57 @@
+.nav-bar
+	relative()
+	display: flex
+	align-items: center
+	flex-direction row
+	flex-wrap: wrap
+	padding: rem(20) 0
+
+	&__logo
+		width: auto;
+		flex-grow 1
+		+media-tablet()
+			flex-grow 0
+			margin-right: rem(15)
+		img
+			width: auto
+			height rem(37)
+
+	&__menu
+		flex-grow: 1
+		width: 100%
+		margin-top: rem(15)
+		+media-tablet()
+			width: auto
+			margin-top: 0
+		ul
+			raw-ul()
+		li
+			raw-li()
+			display: inline-block
+			a
+				display: block
+				padding: em(4) em(24) em(5) 0
+				font-size: em(18)
+				color: inherit
+				transition color .21s ease
+				text-decoration: none
+				&:active
+					text-decoration: none
+					color: $color-secondary
+				+media-tablet()
+					padding-left: em(24)
+				+media-tablet('larger')
+					&:hover
+						text-decoration: none
+						color: $color-secondary
+
+			&:last-child
+				margin-right: 0
+
+	&__myshelf
+		position relative
+		display inline-block
+		+media-tablet()
+			order: 2
+			margin-left: rem(30)
+

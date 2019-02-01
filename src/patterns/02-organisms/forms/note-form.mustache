@@ -1,0 +1,45 @@
+<div class="note-form {{class}}" data-note>
+  {{^isReadOnly}}
+    <form class="note-form__inner">
+      <textarea data-note-input class="note-form__note" data-autoresize rows="1" {{#placeholder}}placeholder="{{placeholder}}"{{/placeholder}}></textarea>
+      <div class="note-form__actions" data-note-actions>
+        <button type="button">SAVE</button><span class="d-inline-block u-mr-2 u-ml-2">|</span>
+        <button type="button" data-note-actions-discard>DON’T SAVE</button>
+      </div>
+    </form>
+  {{/isReadOnly}}
+  {{#isReadOnly}}
+    <div class="note-form__inner">
+      <p class="note-form__note u-pre-wrap">Petierunt uti sibi concilium totius Galliae in diem certam indicere. Cum sociis natoque penatibus et magnis disparturient. Donec sed odio operae, eu vulputate felis rhoncus. Idque Caesaris facer voluntate liceret: sese habere.
+      
+Fabio vel iudice vincam, sunt in culpa qui officia.
+
+New Line
+
+            Tabbed line
+
+
+New line</p>
+      <textarea data-note-input class="note-form__note d-none u-pre-wrap" data-autoresize rows="1" {{#placeholder}}placeholder="{{placeholder}}"{{/placeholder}}>Petierunt uti sibi concilium totius Galliae in diem certam indicere. Cum sociis natoque penatibus et magnis disparturient. Donec sed odio operae, eu vulputate felis rhoncus. Idque Caesaris facer voluntate liceret: sese habere.
+      
+Fabio vel iudice vincam, sunt in culpa qui officia.
+
+New Line
+
+            Tabbed line
+
+
+New line</textarea>
+      <div class="note-form__actions is-active" data-note-actions>
+        <div>
+          <a href="#" data-note-actions-edit>EDIT</a><span class="d-inline-block u-mr-2 u-ml-2">|</span>
+          <a href="#">DELETE NOTE</a>
+        </div>
+        <div class="d-none">
+          <button type="button">SAVE</button><span class="d-inline-block u-mr-2 u-ml-2">|</span>
+          <button type="button" data-note-actions-discard>DON’T SAVE</button>
+        </div>
+      </div>
+    </div>
+  {{/isReadOnly}}
+  </div>

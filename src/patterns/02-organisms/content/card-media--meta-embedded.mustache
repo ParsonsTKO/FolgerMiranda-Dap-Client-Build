@@ -1,0 +1,25 @@
+<article class="card-media is-embedded">
+  <div class="card-media__content">
+    <h4 class="card-media__title">
+      <a href="#">{{title}}</a>
+    </h4>
+    <div class="card-media__desc">
+      {{> organisms-metadata(label: 'Creator', value: 'Shakespeare, William, 1564-1616
+      http://id.loc.gov/authorities/names/n78095332') }}
+      {{> organisms-metadata(class:'is-wide-right', label: 'Date', value: '1909') }}
+      {{> organisms-metadata(class:'is-wide-right', label: 'Media Format', value: 'Printed text') }}
+      {{> organisms-metadata(class:'is-wide-right', label: 'Location', value: 'lorem ipsum it') }}
+      {{> organisms-metadata(class:'is-wide-right', label: 'Call Number', value: 'PM8285.S53H11 1909 Sh.Col.') }}
+      <div class="metadata is-wide-right">
+        <h6 class="metadata__title">
+          Your Folders
+        </h6>
+        <div class="metadata__desc">
+          <a href="#">Translations,</a>
+          <a href="#">Murder Mystery</a>
+        </div>
+      </div>
+    </div>
+    {{>organisms-note-form(row:'1', placeholder:'Add an optional note')}}
+  </div>
+</article>

@@ -1,0 +1,30 @@
+.app-header
+		&__section-a
+				padding: rem(30) 0 rem(25)
+				font-weight 700
+				background-color: black
+				color: white
+				--color-icon: white
+				
+				&-inner
+					display: flex
+					justify-content: space-between
+					+device-small()
+						flex-direction: column
+						.logo-main
+							margin-bottom: rem(10)
+						.dropdown-profile
+							align-self: flex-end
+		&__section-b
+				color: white
+				background-color: $color-terciary-b
+				font-weight 700
+
+		&__section-c
+				padding: rem(15) 0
+				background-color: black
+				font-weight 700
+				color: white
+				a
+					color: inherit
+				

@@ -1,0 +1,77 @@
+{
+  "title": "Folger Shakespeare Library - Digital Asset Platform",
+  "appName": "bundle",
+  "imagePlaceholder": "lorempixel.com",
+  "meta": [{
+    "attribute": "name",
+    "value": "author",
+    "content": "Folger"
+  }, {
+    "attribute": "name",
+    "value": "viewport",
+    "content": "width=device-width, initial-scale=1.0"
+  }, {
+    "attribute": "name",
+    "value": "description",
+    "content": "The Miranda digital asset platform is the new home for the Folgers collections online"
+  }, {
+    "attribute": "name",
+    "value": "robots",
+    "content": "noindex, nofollow"
+  }],
+  "assets": {
+    "css": {
+      "external": [{
+          "url": "fonts.googleapis.com/css?family=PT+Serif+Caption",
+          "description": ""
+        },
+        {
+          "url": "cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css",
+          "description": ""
+        },
+        {
+          "url": "cdnjs.cloudflare.com/ajax/libs/noUiSlider/11.0.3/nouislider.min.css",
+          "description": ""
+        },
+        {
+          "url": "cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.2/css/swiper.min.css",
+          "description": ""
+        }
+      ],
+      "modules": [],
+      "components": [{
+        "url": "font-proxima-nova/font.css",
+        "description": ""
+      }]
+    },
+    "js": {
+      "head": [{
+        "url": "cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js",
+        "description": ""
+      }],
+      "external": [{
+          "url": "cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js",
+          "description": ""
+        },
+        {
+          "url": "cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js",
+          "description": ""
+        },
+        {
+          "url": "cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/js/bootstrap.min.js",
+          "description": ""
+        },
+        {
+          "url": "cdnjs.cloudflare.com/ajax/libs/noUiSlider/11.0.3/nouislider.min.js",
+          "description": ""
+        },
+        {
+          "url": "cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.2/js/swiper.min.js",
+          "description": ""
+        }
+      ],
+      "modules": [],
+      "components": []
+    }
+  }
+}

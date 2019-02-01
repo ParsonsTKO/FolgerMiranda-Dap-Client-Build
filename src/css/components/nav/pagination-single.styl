@@ -1,0 +1,90 @@
+.pagination-single
+	raw-ul()
+	display: flex
+	justify-content: center
+
+	item()
+		size(em(26), em(26))
+		display: flex
+		align-items: center
+		justify-content: center
+		border-radius: 100%
+		line-height 1
+		font-weight: bold
+		border-radius: 100%
+		background-color $color-neutral-c
+
+	li
+		raw-li()
+		display: flex
+		justify-content: center
+		margin: 0 em(10) 0 0
+		&:last-child
+			margin-right: 0
+
+	a
+		item()
+		color: inherit
+		&:hover,
+		&:active
+			text-decoration: none
+			color: $color-secondary
+
+	svg
+		--color-icon: #000
+		size(em(6), em(10))
+
+	&__prev
+		a
+			background-color: transparent
+			--color-icon: #000000
+		&:active
+			svg
+				--color-icon: $color-secondary
+		&:hover
+			svg
+				--color-icon: #be3532
+		&.is-disabled
+			svg
+				--color-icon: #e7e7e7
+
+
+	&__next
+		a
+			background-color: transparent
+			--color-icon: #000000
+		&:active
+			svg
+				--color-icon: $color-secondary
+		&:hover
+			svg
+				--color-icon: #be3532
+		&.is-disabled
+			svg
+				--color-icon: #e7e7e7
+
+
+	&__prev
+		margin-right: 0 !important
+
+	&__next
+		margin-left: em(-10) !important
+
+	&__ellipsis
+		item()
+		&:hover,
+		&:active
+			color: inherit
+
+	.is-current,
+	.is-current a
+		item()
+		background-color: black
+		color: white
+		&:hover
+			color: white
+
+	.is-disabled
+		background-color: transparent
+		&:active
+			opacity 1

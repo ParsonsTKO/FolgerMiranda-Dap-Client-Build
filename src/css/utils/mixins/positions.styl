@@ -1,0 +1,17 @@
+relative($top = null, $right = null, $bottom = null, $left = null)
+  box-position($top, $right, $bottom, $left)
+  position: relative
+
+absolute($top = null, $right = null, $bottom = null, $left = null)
+  box-position($top, $right, $bottom, $left)
+  position: absolute
+
+fixed($top = null, $right = null, $bottom = null, $left = null)
+  box-position($top, $right, $bottom, $left)
+  position: fixed
+
+box-position($top, $right, $bottom, $left)
+  top: $top if $top != null
+  right: $right if $right != null
+  bottom: $bottom if $bottom != null
+  left: $left if $left != null

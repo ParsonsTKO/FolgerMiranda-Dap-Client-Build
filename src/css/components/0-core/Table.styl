@@ -1,0 +1,47 @@
+.Table
+  width: 100%
+  border: 0
+
+  &__files
+    th, td
+      padding: 10px 15px
+    tr.related-items-list
+      &:hover
+        cursor: pointer
+
+    thead
+      background-color: $color-primary
+      color: white
+      th, td
+        font-size: em(12)
+        text-transform: uppercase
+        letter-spacing: 1px
+        font-weight: 600
+
+    & ^[0]
+      &-fileTitle
+        padding-left: rem(30)
+        font-size: rem(20)
+
+      &-fileType,
+      &-fileSize
+        font-size: rem(14)
+        color: #959595
+        
+      &-action
+        text-decoration: none
+        margin-right: rem(15)
+        &:last-child
+          margin-right: 0
+        &:before
+          @extend .icon
+          font-size: rem(20)
+        &__add
+          &:before
+            content: icon-star-outline
+        &__download
+          &:before
+            content: icon-download
+        &__remove
+          &:before
+            content: icon-close

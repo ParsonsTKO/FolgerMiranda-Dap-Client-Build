@@ -1,0 +1,61 @@
+.accordion
+  &__item
+    margin-bottom: em(14)
+    border-radius: 0 !important
+    border-color: $color-border
+    &:last-child
+      border-bottom: 0
+      & ^[0]
+        &-header
+          border-botom: 0
+
+    &-header
+      position: relative
+      display: flex
+      align-items: center
+      padding: em(15) 0
+      border-bottom: 1px solid
+      border-color: $color-border
+      background-color: $color-neutral-b
+      --color-icon: black
+      
+      .dropdown-options
+        position: unset
+
+    &-cell
+      &.is-width-a
+        width: rem(70)
+
+        +device-large('up')
+          width: rem(84)
+      
+      &.is-width-b
+        width: "calc(100% - %s)" %(rem(230))
+        
+        +device-large('up')
+          width: "calc(100% - %s)" %(rem(384))
+
+      &.is-width-c
+        width: rem(90)
+        
+        +device-large('up')
+          width: rem(230)
+      
+      &.is-width-d
+        width: rem(70)
+        
+        +device-large('up')
+          width: rem(70)
+
+    &-title
+      padding-right: em(20)
+      margin-bottom: 0
+      font-family: $font-family-base
+      font-size: em(20)
+      font-weight: 600
+      color: inherit
+      overflow: hidden
+      text-overflow: ellipsis 
+      
+      a
+        color: inherit

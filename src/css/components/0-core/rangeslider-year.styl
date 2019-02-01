@@ -1,0 +1,84 @@
+.rangeslider-year
+	display: flex
+	flex-direction: column
+	padding: rem(5) 0
+	width: 100%
+
+	&__fields
+		display: flex
+		justify-content: space-between  
+	
+	&__field
+		raw-input()
+		width: 60px
+		padding: rem(8) rem(10)
+		margin-bottom: rem(12)
+		font-size: rem(14)
+		text-align: center
+		border: 1px solid $color-border
+		color: inherit
+		&::-webkit-inner-spin-button,
+		&::-webkit-outer-spin-button
+			-webkit-appearance: none
+		
+	&__graph
+		margin: 30px auto
+		width: calc(100% - 20px)
+		&.noUi-horizontal
+			height: 4px
+
+		&.noUi-target
+			border: 0
+			background-color: rgba($color-secondary, .5)
+			box-shadow: none
+			.noUi-connect
+				background-color: $color-secondary
+			.noUi-base
+				.noUi-handle
+					&.noUi-handle-lower,
+					&.noUi-handle-upper
+						size(rem(16), rem(20))
+						top: -25px
+						right: -9px
+						border: 0
+						border-radius: 0
+						background: transparent
+						box-shadow: none
+						cursor: pointer 
+						&:before
+							absolute(0, null, null, 0)
+							size(rem(16), rem(20))
+							content: ''
+							background-image: url("../images/icons/icon-selector-range.svg")
+							background-repeat: no-repeat
+							background-size: cover
+							background-color: transparent 
+						&:after
+							display: none
+						&:focus
+							outline: 0
+		.noUi-pips
+			&.noUi-pips-horizontal
+				padding: 8px 0
+				height: 10px
+				left: 2px
+				.noUi-value
+					display: none
+				.noUi-marker
+					width: 1px
+					height: 8px
+					background: $color-secondary
+					&.noUi-marker-horizontal.noUi-marker-large
+						height: 15px
+	&__label
+		margin-top: rem(-5)
+		font-size: rem(18)
+		font-weight: 700
+		text-align: center	
+
+	&__reset
+		padding: 0
+		font-size: rem(15)
+		font-weight: 500
+		svg
+			--color-icon: inherit

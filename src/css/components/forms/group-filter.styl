@@ -1,0 +1,52 @@
+.group-filter
+	&__title
+		display: block
+		margin-bottom: rem(17)
+		font-size: rem(20)
+		font-weight: bold
+		color: inherit
+		border: 0
+		
+	&__options
+		raw-ul()
+		display: flex
+		flex-direction: column
+		&:before,
+		&:after
+			display: flex
+	
+	&__option
+		raw-li()
+		display: flex
+		align-items: center
+		margin-bottom: rem(14)
+
+		label
+			display: inline-flex
+			align-items: center
+			font-size: rem(17)
+
+		&-label
+			font-size: inherit
+		&-count
+			margin-left: rem(5)
+			font-size: inherit
+			color: #9B9b9B
+			
+	&__field
+		raw-input()
+		size(rem(20), rem(20), rem(20), rem(20))
+		margin: 0 !important
+		margin-right: rem(10) !important
+		border: 2px solid $color-border
+		border-radius: 2px
+		cursor: pointer
+		&:focus
+			outline: none !important
+		&:checked
+			background-image: url("data:image/svg+xml,%3Csvg width='12' height='9' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.286 8.571a.778.778 0 0 1-.6-.257L.257 4.886a.829.829 0 0 1 0-1.2.829.829 0 0 1 1.2 0l2.829 2.828L10.543.257a.829.829 0 0 1 1.2 0 .829.829 0 0 1 0 1.2L4.886 8.314a.778.778 0 0 1-.6.257z' fill='%23FFF' fill-rule='nonzero'/%3E%3C/svg%3E")
+			background-repeat: no-repeat
+			background-size: em(12) em(8.6)
+			background-position: center
+			background-color: $color-border
+

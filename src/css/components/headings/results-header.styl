@@ -1,0 +1,24 @@
+.results-header
+  display flex
+  align-items: center
+  flex-wrap: nowrap
+
+  > *
+    margin-right: em(10)
+    +media-mobile-l()
+      margin-right: em(30)
+    &:last-child
+      margin-right: 0
+  
+  &__primary
+    width: 100%
+
+  &__viewmode
+    display none !important
+    +media-tablet()
+      display inline-flex !important
+    button
+      --color-icon: #9B9B9B
+      &.is-active
+        svg
+          --color-icon: #111111

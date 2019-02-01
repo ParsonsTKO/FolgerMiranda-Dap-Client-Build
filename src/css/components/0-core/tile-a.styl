@@ -1,0 +1,56 @@
+.tile-a
+  &__header
+    display: table
+    margin-bottom: em(13)
+    width: 100%
+    &.has-four-cell
+      & ^[0]
+        &__cell
+          &.is-width-c
+            width: rem(90)
+            
+            +device-large('up')
+              width: rem(230)
+          
+          &.is-width-d
+            width: rem(70)
+            
+            +device-large('up')
+              width: rem(70)
+
+  
+  &__cell
+    display: table-cell
+    vertical-align: middle
+    font-family: $font-family-display
+    a
+      color: inherit
+      svg 
+        vertical-align: inherit
+        margin-left: em(5)
+    
+    &.is-width-a
+      width: rem(70)
+
+      +device-large('up')
+        width: rem(84)
+    
+    &.is-width-b
+      width: "calc(100% - %s)" %(rem(230))
+      
+      +device-large('up')
+        width: "calc(100% - %s)" %(rem(384))
+
+    &.is-width-c
+      width: rem(160)
+      
+      +device-large('up')
+        width: rem(300)
+    
+    
+
+  &__title
+    font-family: $font-family-base
+    font-weight: bold
+    font-size: em(18)
+    margin-bottom: 0

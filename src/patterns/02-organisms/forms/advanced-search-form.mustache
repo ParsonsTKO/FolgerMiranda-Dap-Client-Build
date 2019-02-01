@@ -1,0 +1,37 @@
+<form method="get" action="{{ link.pages-search-results }}" name="changesearch">
+  <div class="row">
+    {{# variantB }}
+      <div class="col-md-12">
+        {{> organisms-search-bar }}
+      </div>
+      <div class="col-md-12">
+        <h2 class="subtitle is-lspaced text-center">ADVANCED SEARCH OPTIONS</h2>
+      </div>
+    {{/ variantB }}
+    <div class="col-md-4">
+      {{> organisms-range-slider-year }}
+    </div>
+    <div class="col-md-4">
+      <div class="form-group">
+        <label for="field-search-languages" class="form-group__label">Language</label>
+        <select class="form-select form-group__field" id="field-search-languages">
+        <option>All languages</option>
+      </select>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="form-group">
+        <label for="field-search-genres" class="form-group__label">Genre</label>
+        <select id="field-search-genres" class="form-select form-group__field">
+          <option>All Genres</option>
+        </select>
+      </div>
+    </div>
+    <div class="col-md-12 u-mt-5">
+      <div class="form-group u-centerAll">
+        <input class="form-checkbox" type="checkbox" id="option-1" name="filter">
+        <label for="option-1"><strong>Only show records with objects that can be viewed online</strong></label>
+      </div>
+    </div>
+  </div>
+</form>

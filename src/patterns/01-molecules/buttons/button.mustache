@@ -1,0 +1,10 @@
+<button type="{{^type}}button{{/type}}{{#type}}{{type}}{{/type}}" class="button {{ class }}"
+  {{#dataToggle}}data-toggle="{{dataToggle}}"{{/dataToggle}}
+  {{#dataTarget}}data-target="#{{dataTarget}}"{{/dataTarget}}>
+  {{# icon }}
+    <svg width="{{w}}" height="{{h}}" class="is-first {{iconClass}}">
+      <use xlink:href="#icon-{{icon}}" />
+    </svg>
+  {{/ icon }}
+  {{ text }}
+</button>

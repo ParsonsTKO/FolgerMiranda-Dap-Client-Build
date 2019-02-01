@@ -1,0 +1,69 @@
+{{> organisms-app-header }}
+{{> organisms-single-page-header(pageTitle: 'Tragedy of Hamlet Prince of Denmark.') }}
+<div class="page-body">
+  <div class="container">
+    <div id="page-topbar" class="row u-mb-10">
+      <div class="col-md-12">
+        {{> organisms-page-actions }}
+        <hr>
+      </div>
+    </div>
+    <div id="page-body" class="row">
+      <aside id="record-metadata" class="page-side col-md-3">
+        {{> organisms-metadata(label: 'Creator', value: 'Shakespeare, William, 1564-1616') }}
+        {{> organisms-metadata(label: 'Date', value: '1909') }}
+        {{> organisms-metadata(label: 'Media format', value: 'Printed text') }}
+        {{> organisms-metadata(label: 'Location', value: 'Coulommiers. France') }}
+        {{> organisms-metadata(label: 'Call Number', value: 'N/A') }}
+        <hr>
+        {{> organisms-metadata(label: 'Physcial Description', value: 'Souvenir promptbook') }}
+        {{> organisms-metadata(label: 'Extent', value: '172 p', tooltip: true) }}
+        {{> organisms-metadata(label: 'Language', value: 'English') }}
+      </aside>
+      <main class="col-md-9">
+        <figure id="record-main-picture" class="record-figure u-mb-12">
+          <img src="https://via.placeholder.com/900x568" alt="Record image">
+          <figcaption class="u-mt-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi</figcaption>
+        </figure>
+        <section id="record-notes" class="u-mb-14">
+          <h4 class="subtitle u-mb-4">Notes</h4>
+          <div class="u-columns-3">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas error provident voluptate nisi dolor ad sapiente iste quos doloremque et corrupti ipsam animi asperiores rerum unde sunt, officiis assumenda aspernatur?
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas error provident voluptate nisi dolor ad sapiente iste quos doloremque et corrupti ipsam animi asperiores rerum unde sunt, officiis assumenda aspernatur?
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas error provident voluptate nisi dolor ad sapiente iste quos doloremque et corrupti ipsam animi asperiores rerum unde sunt, officiis assumenda aspernatur?
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas error provident voluptate nisi dolor ad sapiente iste quos doloremque et corrupti ipsam animi asperiores rerum unde sunt, officiis assumenda aspernatur?
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas error provident voluptate nisi dolor ad sapiente iste quos doloremque et corrupti ipsam animi asperiores rerum unde sunt, officiis assumenda aspernatur?
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas error provident voluptate nisi dolor ad sapiente iste quos doloremque et corrupti ipsam animi asperiores rerum unde sunt, officiis assumenda aspernatur?
+            </p>
+          </div>
+        </section>
+      </main>
+    </div>
+    <hr class="u-mb-7">
+    <div id="related-articles" class="row">
+      <div class="col-md-12">
+        <aside>
+          <section class="related-articles">
+            <h2 class="related-articles__title text-center">See more on Miranda</h2>
+            <div class="related-articles__links">
+              <a class="button is-rounded is-alt-secondary is-outstanding" href="#">Start a new search <span>&nbsp;&nbsp;›</span></a>
+              <a class="button is-rounded is-alt-secondary is-outstanding" href="#">See more results for Hamlet <span>&nbsp;&nbsp;›</span></a>
+              <a class="button is-rounded is-alt-secondary is-outstanding" href="#">Start a new search <span>&nbsp;&nbsp;›</span></a>
+            </div>
+          </section>
+        </aside>
+      </div>
+    </div>
+  </div>
+</div>
+<button type="button" data-toggle="modal" data-target="#opeartionFail">Launch modal</button>
+{{> organisms-modal(id:"operationFail", labelBtnCancel:"ACCEPT", 
+  text:'Operation failed!<br> Please try again.')}}
+{{> organisms-app-footer }}

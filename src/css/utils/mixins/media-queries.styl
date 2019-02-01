@@ -1,0 +1,103 @@
+get-screen-property($condition)
+  if $condition == 'only'
+    'width'
+  else if $condition == 'up' or $condition == 'larger'
+    'min-width'
+  else if $condition == 'down' or $condition == 'smaller'
+    'max-width'
+  else
+    'min-width'
+
+get-media-property($condition)
+  if $condition == 'only'
+    'width'
+  else if $condition == 'up' or $condition == 'larger'
+    'min-width'
+  else if $condition == 'down' or $condition == 'smaller'
+    'max-width'
+  else
+    'max-width'
+
+media-screen($screen-id, $condition = 'up')
+  $property = get-screen-property($condition)
+  $increment = 0
+  $decrement = 0
+  if $condition == 'larger'
+    $increment = 1
+  if $condition == 'smaller'
+    $decrement = 1
+  $width = lookup('$size-screen-' + $screen-id)
+  @media screen and ({$property}: $width - $decrement + $increment * 1px)
+    {block}
+
+media($device, $condition = 'down')
+  $property = get-media-property($condition)
+  $increment = 0
+  $decrement = 0
+  if $condition == 'larger'
+    $increment = 1
+  if $condition == 'smaller'
+    $decrement = 1
+  $width = lookup('$device-' + $device + '-width')
+  @media screen and ({$property}: $width - $decrement + $increment * 1px)
+    {block}
+
+device-custom($width, $condition = 'down')
+  $property = get-media-property($condition)
+  @media screen and ({$property}: $width * 1px)
+    {block}
+
+device-xxlarge($condition = 'down')
+  +media('xxlarge', $condition)
+    {block}
+
+device-xlarge($condition = 'down')
+  +media('xlarge', $condition)
+    {block}
+
+device-large($condition = 'down')
+  +media('large', $condition)
+    {block}
+
+device-medium($condition = 'down')
+  +media('medium', $condition)
+    {block}
+
+device-small($condition = 'down')
+  +media('small', $condition)
+    {block}
+
+device-xsmall($condition = 'down')
+  +media('xsmall', $condition)
+    {block}
+
+
+
+
+media-mobile-s($condition = 'up')
+  +media-screen('mobile-s', $condition)
+    {block}
+
+media-mobile-m($condition = 'up')
+  +media-screen('mobile-m', $condition)
+    {block}
+
+media-mobile-l($condition = 'up')
+  +media-screen('mobile-l', $condition)
+    {block}
+
+media-tablet($condition = 'up')
+  +media-screen('tablet', $condition)
+    {block}
+
+media-laptop($condition = 'up')
+  +media-screen('laptop', $condition)
+    {block}
+
+media-laptop-l($condition = 'up')
+  +media-screen('laptop-l', $condition)
+    {block}
+
+media-4k($condition = 'up')
+  +media-screen('4k', $condition)
+    {block}

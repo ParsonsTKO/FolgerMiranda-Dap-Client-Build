@@ -1,0 +1,27 @@
+<div class="banner-section">
+  <div class="banner-section__content container">
+    <div class="row">
+      <div class="col-md-12">
+        <h3 class="banner-section__heading text-center">
+          What are you looking for?
+        </h3>
+        <div class="banner-section__body">
+          <form>
+            {{> organisms-search-bar }}
+            <div class="col-md-12 bg-danger" style="display: none">
+              <h4 class="text-center">We were not able to work out what you were hoping to search for.If you would like, enter an asterisk (*) for a wildcard search.</h4>
+            </div>
+            {{> molecules-revealer-button(label: 'MORE SEARCH OPTIONS', targetId: 'advanced-search-form',
+              label-after-reveleaded: 'LESS SEARCH OPTIONS') }}
+            <div id="advanced-search-form" class="block-advanced-search" style="display: none">
+              {{> organisms-advanced-search-form() }}
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="banner-section__image">
+    <img src="../../images/banner-1.jpg" alt="banner-section-bg">
+  </div>
+</div>

@@ -1,0 +1,76 @@
+{{> organisms-app-header }}
+{{> organisms-single-page-header(pageTitle: 'Your personal research shelf') }}
+<div class="page-body">
+  <div class="container">
+    <div class="row u-mb-10">
+      <div class="col-md-12">
+        <p>Please <a href="#" class="u-dark"><strong>log in</strong></a> or <a href="#" class="u-dark"><strong>create
+              an account</strong></a> to save and share your shelf.</p>
+        <hr>
+      </div>
+    </div>
+    <div id="page-body" class="row">
+      <aside class="page-side col-md-3">
+        <div class="u-mb-5">
+          {{>molecules-button(class:'is-secondary is-medium is-deflated-sides w-100 mb-2', text:'NEW FOLDER',
+            icon:'plus-circle', w:'15', h:'15', iconClass:'mr-2', dataToggle:'modal', dataTarget:'newFolder')}}
+          {{>molecules-button(class:'is-secondary is-medium is-deflated-sides w-100 mb-2', text:'DOWNLOAD SHELF',
+            icon:'download-b', w:'15', h:'15', iconClass:'mr-2')}}
+          {{>molecules-button(class:'is-secondary is-medium is-deflated-sides w-100 mb-2', text:'CLEAR SHELF',
+            iconClass:'mr-1', dataToggle:'modal', dataTarget:'clearShelf')}}
+        </div>
+      </aside>
+      <main class="col-md-9">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb breadcrumb-myshelf">
+            <li class="active" aria-current="page">My Shelf</li>
+          </ol>
+        </nav>
+        <div class="tile-a u-mb-3">
+          <div class="tile-a__header">
+            <div class="tile-a__cell is-width-a">
+              <h6 class="tile-a__title">Folders</h6>
+            </div>
+            <div class="tile-a__cell is-width-b">
+              <a href="#">Name {{>atoms-svg(id:'icon-arrow-up-b', class:'u-dark', width:'12', height:'12')}}</a>
+            </div>
+            <div class="tile-a__cell is-width-c">
+              <a href="#">Date Modified {{>atoms-svg(id:'icon-minus', width:'10', height:'10')}}</a>
+            </div>
+          </div>
+          <div class="tile-a__body">
+            <ul class="list-myshelf-tags">
+              {{>organisms-myshelf-tag(title:'Costume Ideas &#40;4&#41;')}}
+              {{>organisms-myshelf-tag(title:'Murder Mystery &#40;7&#41')}}
+              {{>organisms-myshelf-tag(title:'Translations &#40;23&#41')}}
+            </ul>
+          </div>
+        </div>
+        <div class="tile-a">
+          <div class="tile-a__header has-four-cell">
+            <div class="tile-a__cell is-width-a">
+              <h6 class="tile-a__title">Items</h6>
+            </div>
+            <div class="tile-a__cell is-width-b">
+              <a href="#">Title {{>atoms-svg(id:'icon-arrow-up-b', class:'u-dark', width:'12', height:'12')}}</a>
+            </div>
+            <div class="tile-a__cell is-width-c">
+              <a href="#">Date Modified {{>atoms-svg(id:'icon-minus', width:'10', height:'10')}}</a>
+            </div>
+            <div class="tile-a__cell is-width-d text-right ">
+              {{>molecules-dropdown-flat(data:'data-toggle-collapse-accordion')}}
+            </div>
+          </div>
+          <div class="tile-a__body">
+            {{>organisms-accordion-records}}
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+</div>
+{{> organisms-app-footer }}
+{{> organisms-modal(id:"clearShelf", labelBtnCancel:"DON'T CLEAR", labelBtnSuccess:'CLEAR', 
+  text:'Are you sure you want to clear your shelf?<br> All items will be removed and you can not undo.')}}
+{{> organisms-modal(id: "newFolder", formId: "add-new-folder",labelBtnCancel: "CANCEL", labelBtnSuccess:'SAVE', 
+  titleModal:'New Folder', isModalCreate:true )}}

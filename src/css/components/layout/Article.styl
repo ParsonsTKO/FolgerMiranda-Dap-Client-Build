@@ -1,0 +1,40 @@
+.Article
+  display: block
+
+  &__single
+    display: table-cell
+    vertical-align: top
+    // width: percent(985, 1440)
+    // float: left
+    padding: rem(40) 0 rem(100)
+    +device-large('smaller')
+      width: 100vw
+      display: block
+
+    & ^[0]-title
+      margin-bottom: rem(35)
+      text-align: center
+
+      span.expand-title
+        cursor: pointer
+
+    & ^[0]-image
+      text-align: center
+      img
+        max-width: rem(540)
+        max-height: rem(733)
+        +device-large('smaller')
+          max-width: 100vw
+          max-height: 100vh
+
+      .mainImage,
+      .mainOembed
+        a.mainImageLeft
+        a.mainImageRight
+          text-decoration: none
+          font-size: 10em
+
+  &__archive
+    padding-top: rem(30)
+    padding-bottom: rem(30)
+    padding-left: rem(45)

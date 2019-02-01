@@ -1,0 +1,20 @@
+.slider-single
+  &__slide 
+    height auto
+    display: flex
+    justify-content: center
+    align-items: strech 
+    padding: 0 em(60)
+    figcaption
+      margin-left: em(-60)
+      margin-right: em(-60)
+
+  &__prev,
+  &__next
+    --color-icon: #111111
+    raw-button()
+    background: transparent
+    transform: translateY(-50%)
+    &.swiper-button-disabled
+      opacity 0
+    

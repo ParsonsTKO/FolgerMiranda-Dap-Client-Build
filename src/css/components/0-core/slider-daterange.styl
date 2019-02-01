@@ -1,0 +1,78 @@
+.slider-daterange
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+	padding: rem(5) 0
+	width: 100%
+
+	&--section
+		display: flex
+		justify-content: space-between  
+	
+	&--field
+		raw-input()
+		size(rem(50), rem(30))
+		padding: rem(8) rem(10)
+		margin-bottom: rem(12)
+		font-size: rem(14)
+		text-align: center
+		border: 1px solid $color-border
+		color: inherit
+		&::-webkit-inner-spin-button,
+		&::-webkit-outer-spin-button
+			-webkit-appearance: none
+		
+	&--slider
+		margin: 30px auto
+		width: calc(100% - 13px)
+		&.noUi-horizontal
+			height: rem(4)
+
+		&.noUi-target
+			border: 0
+			background-color: rgba($color-secondary, .5)
+			box-shadow: none
+			.noUi-connect
+				background-color: $color-secondary
+			.noUi-base
+				.noUi-handle
+					&.noUi-handle-lower,
+					&.noUi-handle-upper
+						size(rem(16), rem(20))
+						top: -25px
+						right: -9px
+						border: 0
+						border-radius: 0
+						background: transparent
+						box-shadow: none
+						cursor: pointer 
+						&:before
+							absolute(0, null, null, 0)
+							size(rem(16), rem(20))
+							content: ''
+							background-image: url("../images/icons/icon-selector-range.svg")
+							background-repeat: no-repeat
+							background-size: cover
+							background-color: transparent 
+						&:after
+							display: none
+						&:focus
+							outline: 0
+		.noUi-pips
+			&.noUi-pips-horizontal
+				padding: 8px 0
+				height: 10px
+				left: 2px
+				.noUi-value
+					display: none
+				.noUi-marker
+					width: 1px
+					height: 8px
+					background: $color-secondary
+					&.noUi-marker-horizontal.noUi-marker-large
+						height: 15px
+	&--title
+		font-size: rem(15)
+		color: inherit
+		font-weight: bold
+		text-align: center	

@@ -1,0 +1,46 @@
+.myshelf-tag
+  position: relative
+  display: flex
+  align-items: center
+  margin-bottom: em(14)
+  width: 100%
+  box-shadow 0 0 5px 0 rgba(black, .3)
+
+  &__cell
+    padding: em(16) 0
+    color: #4C4E6B
+    --color-icon: #4C4E6B
+    
+    &.is-width-a
+      width: rem(70)
+
+      +device-large('up')
+        width: rem(84)
+    
+    &.is-width-b
+      width: "calc(100% - %s)" %(rem(230))
+      
+      +device-large('up')
+        width: "calc(100% - %s)" %(rem(384))
+
+    &.is-width-c
+      width: rem(90)
+      
+      +device-large('up')
+        width: rem(240)
+    
+    &.is-width-d
+      width: rem(70)
+      
+      +device-large('up')
+        width: rem(60)
+
+  
+  &__title
+    display: block
+    padding-right: em(15)
+    font-size em(20)
+    font-weight: 600
+    color: inherit
+    &:hover
+      color: inherit

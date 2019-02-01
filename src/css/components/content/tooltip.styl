@@ -1,0 +1,107 @@
+tooltip($pos = 'top')
+  $border-transparent = em(5) solid transparent
+  $border-color = em(5) solid black
+  $offset = 7
+  position: relative
+  font-size: 12px
+  &:before,
+  &:after
+    position absolute
+    transition: all .21s ease
+    display: block
+    opacity: 0
+    visibility: hidden
+    pointer-events: none
+  &:before
+    size(0, 0)
+    content: ''
+    if $pos == 'top'
+      top: -8 + $offset * 1px
+      left: 50%
+      transform: translateX(-50%)
+      border-left: $border-transparent
+      border-right: $border-transparent
+      border-top: $border-color
+    if $pos == 'bottom'
+      bottom: -8 + $offset * 1px
+      left: 50%
+      transform: translateX(-50%)
+      border-left: $border-transparent
+      border-right: $border-transparent
+      border-bottom: $border-color
+    if $pos == 'left'
+      top: 50%
+      left: -8 + $offset * 1px
+      transform: translateY(-50%)
+      border-top: $border-transparent
+      border-bottom: $border-transparent
+      border-left: $border-color
+    if $pos == 'right'
+      top: 50%
+      left: initial
+      right: -8 + $offset * 1px
+      transform: translateY(-50%)
+      border-top: $border-transparent
+      border-bottom: $border-transparent
+      border-right: $border-color
+  &:after
+    content: attr(data-tooltip)
+    width: auto
+    padding: em(3) em(15)
+    border-radius: 3px
+    background-color: black
+    color: white
+    font-weight: bold
+    white-space: nowrap
+    if $pos == 'top'
+      top: -7 + $offset * 1px
+      left: 50%
+      transform: translateX(-50%) translateY(-100%)
+    if $pos == 'bottom'
+      bottom: -7 + $offset * 1px
+      left: 50%
+      transform: translateX(-50%) translateY(100%)
+    if $pos == 'left'
+      top: 50%
+      left: -7 + $offset * 1px
+      transform: translateX(-100%) translateY(-50%)
+    if $pos == 'right'
+      top: 50%
+      right: -7 + $offset * 1px
+      transform: translateX(100%) translateY(-50%)
+  &:hover
+    z-index: 9999
+    &:before,
+    &:after
+      opacity: 1
+      visibility: visible
+    if $pos == 'top'
+      &:before
+        top: -8px
+      &:after
+        top: -7px
+    if $pos == 'bottom'
+      &:before
+        bottom: -8px
+      &:after
+        bottom: -7px
+    if $pos == 'left'
+      &:before
+        left: -8px
+      &:after
+        left: -7px
+    if $pos == 'right'
+        &:before
+          right: -8px
+        &:after
+          right: -7px
+
+[data-tooltip]
+  &[data-tooltip-pos='top']
+    tooltip('top')
+  &[data-tooltip-pos='bottom']
+    tooltip('bottom')
+  &[data-tooltip-pos='left']
+    tooltip('left')
+  &[data-tooltip-pos='right']
+    tooltip('right')

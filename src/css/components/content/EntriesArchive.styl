@@ -1,0 +1,33 @@
+.EntriesArchive
+  display: block
+  font-family: sans-serif
+
+  &-list
+    raw-list()
+
+  li,
+  &-entry
+    // display: table
+    make-row()
+    margin-bottom: rem(34)
+    // > *
+    //   display: table-cell
+    //   vertical-align: top
+
+  &-picture
+    make-sm-column(1.5)
+    padding-right: 8.5px
+
+    >a
+      display: inline-block
+      width: 80px
+      text-align: center
+
+  &-summary
+    make-sm-column(6.5)
+    padding-left: 8.5px
+
+  &-metadata
+    make-sm-column(4)
+    font-size: 13px
+    color: #959595

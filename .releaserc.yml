@@ -1,0 +1,14 @@
+verifyConditions:
+  - "@semantic-release/changelog"
+  - "@semantic-release/git"
+  #- "@iteratec/semantic-release-bitbucket"
+prepare:
+  - "@semantic-release/changelog"
+  - "@semantic-release/git"
+publish: false
+#- path: "@iteratec/semantic-release-bitbucket"
+#  repositoryName: "dap-client-builds"
+success: false
+fail: false
+npmPublish: false
+tagFormat: "${version}"

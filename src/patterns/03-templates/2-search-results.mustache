@@ -1,0 +1,244 @@
+{{> organisms-app-header }} {{> organisms-search-result-page-header }}
+<div class="page-body">
+  <div class="container">
+    <div id="page-topbar" class="row u-mb-10">
+      <div class="col-md-12">
+        <a href="#" class="button is-lspaced is-bare">
+          {{> atoms-svg(id: 'icon-share', width: '24', height: '24') }}
+          SHARE SEARCH
+        </a>
+        <hr>
+      </div>
+    </div>
+    <div id="page-body" class="row">
+      <aside id="search-filters-aside" class="page-side col-md-3">
+        <form method="get" action="{{ link.pages-search-results }}" name="filter">
+          <section class="page-aside__block">
+            <h4 class="subtitle page-aside__block-heading">Did you mean</h4>
+            <ul class="linkset">
+              <li><a href="#"><em>The Tragedy of Hamlet</em></a></li>
+              <li><a href="#">King Hamlet</a></li>
+              <li><a href="#">Prince Hamlet</a></li>
+            </ul>
+            <ul class="linkset" id="did-you-mean-rest-options" style="display: none">
+              <li><a href="#">Lorem ipsum dolor</a></li>
+              <li><a href="#">Lorem ipsum dolor</a></li>
+              <li><a href="#">Lorem ipsum dolor</a></li>
+              <li><a href="#">Lorem ipsum dolor</a></li>
+              <li><a href="#">Lorem ipsum dolor</a></li>
+              <li><a href="#">Lorem ipsum dolor</a></li>
+            </ul>
+            {{> organisms-see-all-button(target: 'did-you-mean-rest-options', totalVisible: 3) }}
+          </section>
+          <hr>
+          <section class="page-aside__block">
+            <h4 class="subtitle page-aside__block-heading">Filter your results</h4>
+            <ul class="filterset">
+              <li>
+                <input class="form-checkbox" type="checkbox" id="option-1" name="filter" checked>
+                <label for="option-1">Available online</label>
+              </li>
+            </ul>
+          </section>
+          <section class="page-aside__block">
+            <h4 class="subtitle page-aside__block-heading">Date range</h4>
+            {{> organisms-range-slider-year:reload(inputs_class: 'reload', title: false) }}
+          </section>
+          <section class="page-aside__block">
+            <h4 class="subtitle page-aside__block-heading">Source</h4>
+            <ul class="filterset">
+              <li>
+                {{> molecules-checkbox:reload(label: 'Hamnet', q: 2817, id: 'option-21', name: 'source[]', value: 'Hamnet') }}
+              </li>
+              <li>
+                {{> molecules-checkbox:reload(label: 'Youtube', q: 20, id: 'option-22', name: 'source[]', value: 'Youtube') }}
+              </li>
+              <li>
+                {{> molecules-checkbox:reload(label: 'Miranda', q: 1, id: 'option-23', name: 'source[]', value: 'Miranda') }}
+              </li>
+            </ul>
+          </section>
+          <section class="page-aside__block">
+            <h4 class="subtitle page-aside__block-heading">Format</h4>
+            <ul class="filterset">
+              <li>
+                {{> molecules-checkbox:reload(label: 'Text', q: 2069, id: 'option-31', name: 'format[]', value:'Text', search_url: '/search?searchterm=%2A&refine=folger_genres&refineto=111Annotations') }}
+              </li>
+              <li>
+                {{> molecules-checkbox:reload(label: 'Still Image', q: 653, id: 'option-32', name: 'format[]', value:'Still Image', search_url: '/search?searchterm=%2A&refine=folger_genres&refineto=222Annotations') }}
+              </li>
+              <li>
+                {{> molecules-checkbox:reload(label: 'Manuscript', q: 243, id: 'option-33', name: 'format[]', value:'Manuscript', search_url: '/search?searchterm=%2A&refine=folger_genres&refineto=333Annotations') }}
+              </li>
+              <li>
+                {{> molecules-checkbox:reload(label: 'Collection', q: 106, id: 'option-34', name: 'format[]', value:'Collection', search_url: '/search?searchterm=%2A&refine=folger_genres&refineto=444Annotations') }}
+              </li>
+              <li>
+                {{> molecules-checkbox:reload(label: 'Moving Image', q: 76, id: 'option-35', name: 'format[]', value:'Moving Image', search_url: '/search?searchterm=%2A&refine=folger_genres&refineto=555Annotations') }}
+              </li>
+            </ul>
+            <ul class="filterset" id="format-rest-options" style="display: none">
+              <li>
+                {{> molecules-checkbox:reload(label: 'Lorem ipsum', q: 15, id: 'option-36', name: 'format[]', value:'Lorem ipsum', search_url: '/search?searchterm=%2A&refine=folger_genres&refineto=666Annotations') }}
+              </li>
+            </ul>
+            {{> organisms-see-all-button(target: 'format-rest-options', totalVisible: 5) }}
+          </section>
+          <section class="page-aside__block">
+            <h4 class="subtitle page-aside__block-heading">Genre</h4>
+            <ul class="filterset">
+              <li>
+                {{> molecules-checkbox:reload(label: 'Art', q: 2069, id: 'option-Art', name: 'genre[]', value:'Art', category: 'folger_genre') }}
+              </li>
+              <li>
+                {{> molecules-checkbox:reload(label: 'Communications', q: 653, id: 'option-Communications', name: 'genre[]', value:'Communications', category: 'folger_genre') }}
+              </li>
+              <li>
+                {{> molecules-checkbox:reload(label: 'IpsumC', q: 243, id: 'option-IpsumC', name: 'genre[]', value:'IpsumC', category: 'folger_genre') }}
+              </li>
+              <li>
+                {{> molecules-checkbox:reload(label: 'IpsumD', q: 106, id: 'option-IpsumD', name: 'genre[]', value:'IpsumD', category: 'folger_genre') }}
+              </li>
+              <li>
+                {{> molecules-checkbox:reload(label: 'IpsumE', q: 76, id: 'option-IpsumE', name: 'genre[]', value:'IpsumE', category: 'folger_genre') }}
+              </li>
+            </ul>
+            <ul class="filterset" id="genre-rest-options" style="display: none">
+              <li>
+                {{> molecules-checkbox:reload(label: 'Lorem ipsum4', q: 15, id: 'option-genre-f', name: 'genre[]', value:'Lorem ipsum4') }}
+              </li>
+            </ul>
+            {{> organisms-see-all-button(target: 'genre-rest-options', totalVisible: 5) }}
+          </section>
+          <section class="page-aside__block">
+            <h4 class="subtitle page-aside__block-heading">Language</h4>
+            <ul class="filterset">
+              <li>
+                {{> molecules-checkbox:reload(label: 'Ipsum LangA', q: 2069, id: 'option-IpsumLangA', name: 'language[]', value:'Ipsum LangA') }}
+              </li>
+              <li>
+                {{> molecules-checkbox:reload(label: 'Ipsum LangB', q: 653, id: 'option-IpsumLangB', name: 'language[]', value:'Ipsum LangB') }}
+              </li>
+              <li>
+                {{> molecules-checkbox:reload(label: 'Ipsum LangC', q: 243, id: 'option-IpsumLangC', name: 'language[]', value:'Ipsum LangC') }}
+              </li>
+              <li>
+                {{> molecules-checkbox:reload(label: 'Ipsum LangD', q: 106, id: 'option-IpsumLangD', name: 'language[]', value:'Ipsum LangD') }}
+              </li>
+              <li>
+                {{> molecules-checkbox:reload(label: 'Ipsum LangE', q: 76, id: 'option-IpsumLangE', name: 'language[]', value:'Ipsum LangE') }}
+              </li>
+            </ul>
+            <ul class="filterset" id="lang-rest-options" style="display: none">
+              <li>
+                {{> molecules-checkbox:reload(label: 'Lorem ipsum3', q: 15, id: 'option-lang-f', name: 'language[]', value:'Lorem ipsum3') }}
+              </li>
+            </ul>
+            {{> organisms-see-all-button(target: 'lang-rest-options', totalVisible: 5) }}
+          </section>
+          <section class="page-aside__block">
+            <h4 class="subtitle page-aside__block-heading">Place</h4>
+            <ul class="filterset">
+              <li>
+                {{> molecules-checkbox:reload(label: 'IpsumA', q: 2069, id: 'option-IpsumPlaceA', name: 'place[]', value:'IpsumA') }}
+              </li>
+              <li>
+                {{> molecules-checkbox:reload(label: 'No place, unknown, or undetermined', q: 653, id: 'option-IpsumPlaceB', name: 'place[]', value:'No place, unknown, or undetermined') }}
+              </li>
+              <li>
+                {{> molecules-checkbox:reload(label: 'IpsumC', q: 243, id: 'option-IpsumPlaceC', name: 'place[]', value:'IpsumC') }}
+              </li>
+              <li>
+                {{> molecules-checkbox:reload(label: 'IpsumD', q: 106, id: 'option-IpsumPlaceD', name: 'place[]', value:'IpsumD') }}
+              </li>
+              <li>
+                {{> molecules-checkbox:reload(label: 'IpsumE', q: 76, id: 'option-IpsumPlaceE', name: 'place[]', value:'IpsumE') }}
+              </li>
+            </ul>
+            <ul class="filterset" id="place-rest-options" style="display: none">
+              <li>
+                {{> molecules-checkbox:reload(label: 'Lorem ipsum2', q: 15, id: 'option-place-f', name: 'place[]', value:'Lorem ipsum2') }}
+              </li>
+            </ul>
+            {{> organisms-see-all-button(target: 'place-rest-options', totalVisible: 5) }}
+          </section>
+        </form>
+      </aside>
+      <main class="col-md-9">
+        <article id="related-searches" class="u-mb-8">
+          <h3 class="heading-secondary u-mb-5">Related Searches</h3>
+          <div class="slider-rail swiper-container" data-swiper="rail">
+            <div class="slider-rail__wrapper swiper-wrapper">
+              <div class="slider-rail__slide swiper-slide">
+                {{> molecules-link-record(title: 'Hamlet: Copy', content: '326 results')  }}
+              </div>
+              <div class="slider-rail__slide swiper-slide">
+                {{> molecules-link-record(title: 'Hamlet: Copy', content: '326 results')  }}
+              </div>
+              <div class="slider-rail__slide swiper-slide">
+                {{> molecules-link-record(title: 'Hamlet: Copy', content: '326 results')  }}
+              </div>
+              <div class="slider-rail__slide swiper-slide">
+                {{> molecules-link-record(title: 'Hamlet: Copy', content: '326 results')  }}
+              </div>
+              <div class="slider-rail__slide swiper-slide">
+                {{> molecules-link-record(title: 'Hamlet: Copy', content: '326 results')  }}
+              </div>
+            </div>
+            <button class="slider-rail__prev swiper-button-prev">
+              {{> atoms-svg(id: 'icon-arrow-left', width: 10, height: 20) }}
+            </button>
+            <button class="slider-rail__next swiper-button-next">
+              {{> atoms-svg(id: 'icon-arrow-right', width: 10, height: 20) }}
+            </button>
+          </div>
+        </article>
+        <div id="search-results-container">
+          <section id="visualization-options" class="results-header u-mb-6">
+            <h3 class="heading-secondary results-header__primary">2838 Results</h3>
+            <div class="buttonset results-header__viewmode" data-viewmode="search-results">
+              <button class="button is-icon is-active" data-mode="row">
+                {{> atoms-svg(id: 'icon-bars', width: '20', height: '20') }}
+              </button>
+              <button class="button is-icon" data-mode="grid">
+                {{> atoms-svg(id: 'icon-grid', width: '20', height: '20') }}
+              </button>
+            </div>
+            <select class="form-select is-small is-inline">
+              <option selected>View 6 Results</option>
+              <option>View 9 Results</option>
+              <option>View 12 Results</option>
+            </select>
+          </section>
+          <div id="search-results" class="result-records u-mb-7">
+            <section id="featured-result" class="result-records__featured">
+              <h5 class="subtitle is-secondary u-mb-3">FEATURED RESULT</h5> {{> organisms-card-media }}
+            </section>
+            <div>
+              {{> organisms-card-media--meta(isOnline: true, title: 'Hamleto, reĝido de Danujo : tragedio en kvin aktoj / W. Shakespeare ; tradukis L. Zamenhof.', icon: 'icon-sound', iconWidth: 28, iconHeight: 26) }}
+            </div>
+            <div>
+              {{> organisms-card-media--meta(title: 'Hamleto, reĝido de Danujo : tragedio en kvin aktoj / W. Shakespeare ; tradukis L. Zamenhof.', icon: 'icon-doc', iconWidth: 22, iconHeight: 24) }}
+            </div>
+            <div>
+              {{> organisms-card-media--meta(title: 'Typed script of Richard Burton’s Hamlet / directed by John Gielgud.', icon: 'icon-script', iconWidth: 24, iconHeight: 24) }}
+            </div>
+            <div>
+              {{> organisms-card-media--meta(isOnline: true, title: 'Shakespeare’s Life Stories') }}
+            </div>
+            <div>
+              {{> organisms-card-media--meta(title: 'Hamlet’s Soliloquies', icon: 'icon-video', iconWidth: 24, iconHeight: 24) }}
+            </div>
+            <div>
+              {{> organisms-card-media--meta(title: 'Hamleto, reĝido de Danujo : tragedio en kvin aktoj / W. Shakespeare ; tradukis L. Zamenhof.', icon: 'icon-picture', iconWidth: 22, iconHeight: 24) }}
+            </div>
+          </div>
+        </div>
+        {{> organisms-pagination }}
+      </main>
+    </div>
+  </div>
+</div>
+{{> organisms-modal(id:"operationFail", labelBtnCancel:"ACCEPT", 
+  text:'Operation failed!<br> Please try again.')}}
+{{> organisms-app-footer }}

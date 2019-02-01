@@ -1,0 +1,29 @@
+.aside-page
+  display: block
+  width 100%
+  color: black
+
+  &__block
+    display: block
+    margin-bottom: rem(26)
+    width: 100%
+    &-title
+      display: block
+      margin-bottom: rem(8)
+      font-family: $font-family-base
+      font-size: rem(20)
+      font-weight: bold
+
+    &-content
+      display: block
+      margin-bottom: rem(27)
+
+  &__options
+    raw-ul()
+    li
+      raw-li()
+      margin-bottom: rem(8)
+      display: block
+      a
+        font-size: rem(17)
+        color: inherit

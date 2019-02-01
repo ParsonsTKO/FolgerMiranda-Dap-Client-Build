@@ -1,0 +1,66 @@
+for num in (1..140)
+  .u-mt-{num}
+    margin-top: em(num * 5)
+  .u-md-mt-{num}
+    +device-medium()
+      margin-top: em(num * 5)
+  .u-sm-mt-{num}
+    +device-small()
+      margin-top: em(num * 5)
+  .u-xs-mt-{num}
+    +device-xsmall()
+      margin-top: em(num * 5)
+
+  .u-mb-{num}
+    margin-bottom: em(num * 5)
+  .u-md-mb-{num}
+    +device-medium()
+      margin-bottom: em(num * 5)
+  .u-sm-mb-{num}
+    +device-small()
+      margin-bottom: em(num * 5)
+  .u-xs-mb-{num}
+    +device-xsmall()
+      margin-bottom: em(num * 5)
+
+  .u-ml-{num}
+    margin-left: em(num * 5)
+  .u-md-ml-{num}
+    +device-medium()
+      margin-left: em(num * 5)
+  .u-sm-ml-{num}
+    +device-small()
+      margin-left: em(num * 5)
+  .u-xs-ml-{num}
+    +device-xsmall()
+      margin-left: em(num * 5)
+
+  .u-mr-{num}
+    margin-right: em(num * 5)
+  .u-md-mr-{num}
+    +device-medium()
+      margin-right: em(num * 5)
+  .u-sm-mr-{num}
+    +device-small()
+      margin-right: em(num * 5)
+  .u-xs-mr-{num}
+    +device-xsmall()
+      margin-right: em(num * 5)
+
+.u-mt-0
+    margin-top: 0
+.u-mb-0
+    margin-bottom: 0
+.u-ml-0
+    margin-left: 0
+.u-mr-0
+    margin-right: 0
+
+.bg-danger
+  +device-medium()
+    width: 100%
+  margin: 3rem auto 1rem auto
+  width: 60%
+  > h5.text-center
+    padding: 1em
+    font-size: 1em

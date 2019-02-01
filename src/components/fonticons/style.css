@@ -1,0 +1,83 @@
+@font-face {
+  font-family: 'fonticons';
+  src:  url('fonts/fonticons.eot?7pb6a9');
+  src:  url('fonts/fonticons.eot?7pb6a9#iefix') format('embedded-opentype'),
+    url('fonts/fonticons.ttf?7pb6a9') format('truetype'),
+    url('fonts/fonticons.woff?7pb6a9') format('woff'),
+    url('fonts/fonticons.svg?7pb6a9#fonticons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'fonticons' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-book-closed:before {
+  content: "\e907";
+}
+.icon-check-circle:before {
+  content: "\e90a";
+}
+.icon-music:before {
+  content: "\e90b";
+}
+.icon-pics:before {
+  content: "\e90c";
+}
+.icon-printed:before {
+  content: "\e90d";
+}
+.icon-scene:before {
+  content: "\e90e";
+}
+.icon-video-play:before {
+  content: "\e90f";
+}
+.icon-arrow-left:before {
+  content: "\e908";
+  color: #e7e7e7;
+}
+.icon-arrow-right:before {
+  content: "\e909";
+  color: #959595;
+}
+.icon-search:before {
+  content: "\e906";
+  color: #595959;
+}
+.icon-star-outline:before {
+  content: "\e902";
+  color: #595959;
+}
+.icon-book:before {
+  content: "\e900";
+  color: #595959;
+}
+.icon-download:before {
+  content: "\e901";
+  color: #595959;
+}
+.icon-star:before {
+  content: "\e903";
+  color: #959595;
+}
+.icon-warning:before {
+  content: "\e904";
+  color: #595959;
+}
+.icon-close:before {
+  content: "\e905";
+  color: #595959;
+}

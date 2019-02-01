@@ -1,0 +1,44 @@
+.app-footer
+  padding: rem(25) 0
+  background-color: $color-terciary-c
+  &__inner
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    align-items: center
+  &__nav
+    width 100%
+    margin-top: rem(30)
+    +media-tablet()
+      width auto
+      margin-top: 0
+    ul
+      raw-list()
+      +media-tablet()
+        text-align: right
+    li
+      border-bottom: solid 1px rgba(white, .21)
+      +media-tablet()
+        display: inline-block
+        border-bottom: 0
+      a
+        display: block
+        padding: rem(5) 0
+        font-size: rem(14)
+        font-weight: 600
+        color: white
+        text-transform: uppercase
+        text-decoration none
+        transition color .21s ease
+        +media-tablet()
+          padding: rem(14) rem(25)
+        +media-tablet('larger')
+          &:hover
+            color: $color-secondary
+  
+  .logo-main
+    margin-left: auto
+    margin-right: auto
+    +media-tablet()
+      margin-left 0
+      margin-right 0

@@ -1,0 +1,73 @@
+.dropdown-options
+  position: relative
+
+  &__toggle[aria-expanded=true]
+    --color-icon: $color-secondary
+  
+  &__menu
+    min-width: em(180)
+    margin: 0
+    border: 1px solid #C2C2C2
+    border-top: 3px solid $color-secondary
+    border-radius: 0
+    top: 100% !important
+    transform: none !important
+
+    li
+      margin-bottom: em(3)
+      padding: 0
+      font-size: em(16)
+      color: $color-base
+      &:last-child
+        margin-bottom: 0
+
+      &:hover
+        background-color: unset
+      
+      a
+        position: relative
+        display: block
+        padding: em(3) em(22)
+        color: inherit
+        &:hover
+          text-decoration: none
+          color: $color-secondary
+          --color-icon: $color-secondary
+        
+        svg
+          position: absolute
+          top: "calc(50% - %s)" % (em(3))
+          right: em(20)
+          margin-left: em(5)
+
+      
+    &.is-right
+      right: 0
+      left: auto !important
+
+  &.is-submenu 
+    position: relative
+    background-color: #fff 
+    &:hover
+      > a
+        color: $color-secondary
+        --color-icon: $color-secondary
+      > .dropdown-menu
+        display: block
+    & ^[0]
+      &__menu
+        border-top: 1px solid #C2C2C2
+        top: 0 !important
+        left: 100%
+        max-height: rem(300)
+        overflow: auto
+        box-shadow: 0 0 0 0 rgba(white, 1)
+        transform: translate(0, - 20%)
+        &.is-submenu-right
+          right: 100%
+          left: unset
+          +device-custom(1538px, 'up')
+            right: unset
+            left: 100%
+
+

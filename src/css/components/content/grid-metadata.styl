@@ -1,0 +1,33 @@
+.grid-metadata
+  position: relative
+  display: flex
+  flex-wrap: wrap
+  &:after
+    absolute(100%)
+    width: 100%
+    margin-top: -2px
+    border-bottom: 2px solid #e5e5e5
+    content: ''
+  
+  > .metadata
+    flex-basis: calc(100% / 5)
+    padding: 0 rem(20) rem(40)
+    margin-bottom: 0 
+    border-bottom: 2px solid #e5e5e5
+    .metadata__title,
+    .metadata__desc
+      position: relative
+      left: rem(-20)
+
+    &:nth-child(n+6)
+      margin-top: rem(40)
+
+    +device-medium()
+      flex-basis: calc(100% / 3)
+      &:nth-child(n+4)
+        margin-top: rem(40)
+
+    +device-small()
+      flex-basis: 100%
+      &:nth-child(n+2)
+        margin-top: rem(40)

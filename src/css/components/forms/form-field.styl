@@ -1,0 +1,25 @@
+.form-field
+  raw-input()
+  raw-button()
+  size(100%, rem(60))
+  padding: rem(20)
+  font-size: rem(18)
+  line-height: 1.1
+  font-weight: bold
+  border: 1px solid $color-border
+  border-radius: 0
+  background-color: white
+  color: black
+  &:focus
+    background-color: white 
+  &::placeholder
+    color: inherit
+    font-weight: normal
+  
+  &.is-small
+    size(100%, rem(45))
+    padding: rem(15)
+
+  &[readonly],
+  &[disabled]
+    background: $color-neutral-c

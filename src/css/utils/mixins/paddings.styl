@@ -1,0 +1,61 @@
+for num in (1..140)
+  .u-pad-{num}
+    padding: em(num * 5)
+  .u-pt-{num}
+    padding-top: em(num * 5)
+  .u-md-pt-{num}
+    +device-medium()
+      padding-top: em(num * 5)
+  .u-sm-pt-{num}
+    +device-small()
+      padding-top: em(num * 5)
+  .u-xs-pt-{num}
+    +device-xsmall()
+      padding-top: em(num * 5)
+
+  .u-pb-{num}
+    padding-bottom: em(num * 5)
+  .u-md-pb-{num}
+    +device-medium()
+      padding-bottom: em(num * 5)
+  .u-sm-pb-{num}
+    +device-small()
+      padding-bottom: em(num * 5)
+  .u-xs-pb-{num}
+    +device-xsmall()
+      padding-bottom: em(num * 5)
+
+  .u-pl-{num}
+    padding-left: em(num * 5)
+  .u-md-pl-{num}
+    +device-medium()
+      padding-left: em(num * 5)
+  .u-sm-pl-{num}
+    +device-small()
+      padding-left: em(num * 5)
+  .u-xs-pl-{num}
+    +device-xsmall()
+      padding-left: em(num * 5)
+
+  .u-pr-{num}
+    padding-right: em(num * 5)
+  .u-md-pr-{num}
+    +device-medium()
+      padding-right: em(num * 5)
+  .u-sm-pr-{num}
+    +device-small()
+      padding-right: em(num * 5)
+  .u-xs-pr-{num}
+    +device-xsmall()
+      padding-right: em(num * 5)
+
+.u-p-0
+  padding: 0
+.u-pt-0
+  padding-top: 0
+.u-pr-0
+  padding-right: 0
+.u-pb-0
+  padding-bottom: 0
+.u-pl-0
+  padding-left: 0

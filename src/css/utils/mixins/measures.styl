@@ -1,0 +1,23 @@
+size($width = null, $height = null, $min-width = null, $min-height = null, $max-width = null, $max-height = null)
+  width: $width if $width != null
+  height: $height if $height != null
+  min-width: $min-width if $min-width != null
+  min-height: $min-height if $min-height != null
+  max-width: $max-width if $max-width != null
+  max-height: $max-height if $max-height != null
+
+
+centered($max-width = $grid-container * 1px)
+  display: block
+  margin-left: auto
+  margin-right: auto
+  max-width: $max-width
+
+em($size = $font-size-base, $context = $font-size-base)
+  ($size / $context) * 1em
+
+rem($size = $font-size-base, $context = $font-size-base)
+  ($size / $context) * 1rem
+
+percent($size, $context = $grid-container)
+  ($size * 100 / $context) + '%'

@@ -1,0 +1,14 @@
+<div class="rangeslider-year {{ styleModifier }}" data-range-slider-year="">
+  <div class="rangeslider-year__fields">
+    <label for="datecreatedfrom" class="d-none">Created from</label> 
+    <input title="Created from" type="number" class="rangeslider-year__field is-min {{ inputs_class }}" name="createdfrom" placeholder="Min. year" value="1500" min="1025" max="2018" step="1" data-initial="1025" id="datecreatedfrom">
+    {{# title }}<div class="rangeslider-year__label">Date range</div>{{/ title }}
+    <label for="datecreateduntil" class="d-none">Created until</label> 
+    <input title="Created until" type="number" class="rangeslider-year__field is-max {{ inputs_class }}" name="createduntil" placeholder="Max. year" value="1900" min="1025" max="2018" step="1" data-initial="2018" id="datecreateduntil">
+  </div>
+  <div class="rangeslider-year__graph" data-range-slider-year-graph="1025,2018"></div>
+  <button type="button" class="button rangeslider-year__reset" data-range-silder-year-reset>
+    {{> atoms-svg(id: 'icon-reset', width: 16, height: 15) }}
+    Reset date range
+  </button>
+</div>

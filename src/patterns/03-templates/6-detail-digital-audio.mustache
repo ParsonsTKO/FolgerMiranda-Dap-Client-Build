@@ -1,0 +1,86 @@
+{{> organisms-app-header }}
+{{> organisms-single-page-header(pageTitle: 'Tragedy of Hamlet Prince of Denmark.') }}
+<div class="page-body">
+  <div class="container">
+    <div id="page-topbar" class="row u-mb-8">
+      <div class="col-md-12">
+        <div class="page-actions is-row">
+          <a href="#" class="button is-lspaced is-bare">
+            {{> atoms-svg(id: 'icon-add-to-shelf', width: '24', height: '24') }} ADD TO SHELF
+          </a>
+          <a href="#" class="button is-lspaced is-bare">
+            {{> atoms-svg(id: 'icon-share', width: '24', height: '24') }} SHARE
+          </a>
+        </div>
+        <hr>
+      </div>
+    </div>
+    <div id="page-body" class="row">
+      <aside id="record-metadata" class="page-side col-md-3">
+        {{> organisms-metadata(label: 'Creator', value: 'Shakespeare, William, 1564-1616') }}
+        {{> organisms-metadata(label: 'Location', value: 'Coulommiers. France') }}
+        {{> organisms-metadata(label: 'Extent', value: '172 p', tooltip: true) }}
+        <hr>
+        {{> organisms-metadata(label: 'Language', value: 'English') }}
+        {{> organisms-metadata(label: 'Holding institution', value: 'Mauris non tempor') }}
+      </aside>
+      <main class="col-md-9">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="player is-audio">
+              <audio controls>
+              <source src="https://api.clyp.it/uhqssugv.mp3" type="audio/ogg">
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+          </div>
+          <div class="col-md-11 mr-auto">
+            <h4 class="subtitle u-mb-3">Media</h4>
+            <section id="record-notes" class="u-mb-14">
+              {{> organisms-metadata(label: 'Citacion', value: 'Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin,
+                erat a elementum rutrum, neque sem pretium metus, quismollis nisl nunc et massa. Vestibul.') }}
+              <div class="metadata">
+                <h5 class="metadata__title">Notes</h5>
+                <div class="metadata__desc">
+                  <h6 class="u-fontSize-xmedium u-fw-medium u-mb-2">Note Label 1</h6>
+                  <p>
+                    Curabitur lobortis id lorem id bibendum. Ut id consectetur magna. Quisque volutpat augue enim, pulvinar lobortis
+                    nibh lacinia
+                    at. Vestibulum nec erat ut mi sollicitudin porttitor id sit amet risus. Nam tempus vel odio vitae aliquam. In
+                    imperdiet eros
+                    id lacus vestibulum vestibulum.
+                  </p>
+                  <h6 class="u-fontSize-xmedium u-fw-medium u-mb-2">Note Label 2</h6>
+                  <p>
+                    Curabitur lobortis id lorem id bibendum. Ut id consectetur magna. Quisque volutpat augue enim, pulvinar lobortis
+                    nibh lacinia
+                    at. Vestibulum nec erat ut mi sollicitudin porttitor id sit amet risus. Nam tempus vel odio vitae aliquam. In
+                    imperdiet eros
+                    id lacus vestibulum vestibulum.
+                  </p>
+                </div>
+              </div>
+              {{> organisms-metadata(label: 'Related names', value: 'Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin.') }}
+              {{> organisms-metadata(label: 'Related materials', value: 'Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras.') }}
+              {{> organisms-metadata(label: 'Transcription', value: 'Curabitur lobortis id lorem id bibendum. Ut id consectetur magna. Quisque volutpat augue enim, pulvinar lobortis nibh lacinia at. Vestibulum nec erat ut mi sollicitudin porttitor id sit amet ') }}
+            </section>
+          </div>
+        </div>
+      </main>
+    </div>
+    <hr class="u-mb-7">
+    <div id="related-articles" class="row">
+      <div class="col-md-12">
+        <aside>
+          <section class="related-articles">
+            <h2 class="related-articles__title text-center">See more on Miranda</h2>
+            <div class="related-articles__links">
+              <a class="button is-rounded is-alt-secondary is-outstanding" href="#">Start a new search <span>&nbsp;&nbsp;›</span></a>
+            </div>
+          </section>
+        </aside>
+      </div>
+    </div>
+  </div>
+</div>
+{{> organisms-app-footer }}

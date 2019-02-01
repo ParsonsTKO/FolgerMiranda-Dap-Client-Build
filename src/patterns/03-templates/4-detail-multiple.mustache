@@ -1,0 +1,103 @@
+{{> organisms-app-header }}
+{{> organisms-single-page-header }}
+<div class="page-body">
+  <div class="container">
+    <div id="page-topbar" class="row u-mb-10">
+      <div class="col-md-12">
+        {{> organisms-page-actions }}
+        <hr>
+      </div>
+    </div>
+    <div id="page-body" class="row">
+      <aside id="record-metadata" class="page-side col-md-3">
+        {{> organisms-metadata(label: 'Creator', value: 'Shakespeare, William, 1564-1616') }}
+        {{> organisms-metadata(label: 'Date', value: '1909') }}
+        {{> organisms-metadata(label: 'Media format', value: 'Printed text') }}
+        {{> organisms-metadata(label: 'Location', value: 'Coulommiers. France') }}
+        {{> organisms-metadata(label: 'Call Number', value: 'N/A') }}
+        <hr>
+        {{> organisms-metadata(label: 'Physcial Description', value: 'Also available as a digital reproduction.') }}
+        {{> organisms-metadata(label: 'Extent', value: '172 p', tooltip: true) }}
+        <div class="metadata">
+          <h6 class="metadata__title">Subject</h6>
+          <div class="metadata__desc">
+            <p>Booksellers’ advertisements --India --Calcutta --20th century.</p>
+            <p>Translations (documents) --India --Calcutta --20th century.</p>
+          </div>
+        </div>
+        {{> organisms-metadata(label: 'Language', value: 'English') }}
+      </aside>
+      <main class="col-md-9">
+        {{> organisms-universalviewer }}
+      <div class="u-mb-9 iframe-noembed" data-embed-url="https://www.youtube.com/embed/lKVAcg3V-lY?feature=oembed"></div>
+      <section id="doc-pages" class="u-mb-12">
+          <h4 class="subtitle u-mb-7 text-center">Pages in this document</h4>
+          <div class="slider-rail swiper-container" data-swiper="rail" data-slides-per-view="4">
+            <div class="slider-rail__wrapper swiper-wrapper">
+              <div class="slider-rail__slide swiper-slide">
+                {{> organisms-doc-page-figure(name: 'front inside cover || front endleaf 1 recto', ext: 'jpg', size: '1536x1156 - 1,139kb') }}
+              </div>
+              <div class="slider-rail__slide swiper-slide">
+                {{> organisms-doc-page-figure(name: 'front endleaf 1 verso || [page 1]', ext: 'jpg', size: '1536x1153 - 1,166kb') }}
+              </div>
+              <div class="slider-rail__slide swiper-slide">
+                {{> organisms-doc-page-figure(name: '[page 2] || [page 3]', ext: 'jpg', size: '1536x1151 - 1,021kb') }}
+              </div>
+              <div class="slider-rail__slide swiper-slide">
+                {{> organisms-doc-page-figure(name: '[page 4] || [page 5]', ext: 'jpg', size: '1536x1151 - 1,021kb') }}
+              </div>
+              <div class="slider-rail__slide swiper-slide">
+                {{> organisms-doc-page-figure(name: 'Lorem ipsum sit amet', ext: 'jpg', size: '1536x1151 - 1,021kb') }}
+              </div>
+            </div>
+            <button class="slider-rail__prev swiper-button-prev">
+              {{> atoms-svg(id: 'icon-arrow-left', width: 10, height: 20) }}
+            </button>
+            <button class="slider-rail__next swiper-button-next">
+              {{> atoms-svg(id: 'icon-arrow-right', width: 10, height: 20) }}
+            </button>
+          </div>
+        </section>
+        <section id="digital-objects" class="u-mb-12">
+          <h4 class="subtitle u-mb-7 text-center">Other digital objects</h4>
+          <div class="slider-rail swiper-container" data-swiper="rail" data-slides-per-view="5">
+            <div class="slider-rail__wrapper swiper-wrapper">
+              <div class="slider-rail__slide swiper-slide">
+                {{> organisms-digital-object-figure(name: 'filename', ext: 'xml') }}
+              </div>
+              <div class="slider-rail__slide swiper-slide">
+                {{> organisms-digital-object-figure(name: 'filename', ext: 'pdf') }}
+              </div>
+              <div class="slider-rail__slide swiper-slide">
+                {{> organisms-digital-object-figure(name: 'filename', ext: 'docx') }}
+              </div>
+              <div class="slider-rail__slide swiper-slide">
+                {{> organisms-digital-object-figure(name: 'filename', ext: 'mp4') }}
+              </div>
+            </div>
+            <button class="slider-rail__prev swiper-button-prev">
+              {{> atoms-svg(id: 'icon-arrow-left', width: 10, height: 20) }}
+            </button>
+            <button class="slider-rail__next swiper-button-next">
+              {{> atoms-svg(id: 'icon-arrow-right', width: 10, height: 20) }}
+            </button>
+          </div>
+        </section>
+      </main>
+    </div>
+    <hr class="u-mb-7">
+    <div id="related-articles" class="row">
+      <div class="col-md-12">
+        <aside>
+          <section class="related-articles">
+            <h2 class="related-articles__title text-center">See more on Miranda</h2>
+            <div class="related-articles__links">
+              <a class="button is-rounded is-alt-secondary is-outstanding" href="#">Start a new search <span>&nbsp;&nbsp;›</span></a>
+            </div>
+          </section>
+        </aside>
+      </div>
+    </div>
+  </div>
+</div>
+{{> organisms-app-footer }}

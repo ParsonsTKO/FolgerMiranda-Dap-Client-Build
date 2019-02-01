@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="771" height="37" viewBox="0 0 771 37">
+  <g fill="none" fill-rule="evenodd" transform="translate(0 -22)">
+    <g transform="translate(0 40)">
+      <rect width="750" height="2" fill="#DADADA" rx="1" transform="translate(11)"/>
+      <text fill="#4A4A4A" font-family="SourceSansPro-Regular, Source Sans Pro" font-size="10">
+        <tspan x="0" y="17">1281</tspan>
+      </text>
+      <text fill="#4A4A4A" font-family="SourceSansPro-Regular, Source Sans Pro" font-size="10">
+        <tspan x="376" y="17">1600</tspan>
+      </text>
+      <text fill="#4A4A4A" font-family="SourceSansPro-Regular, Source Sans Pro" font-size="10">
+        <tspan x="751" y="17">2017</tspan>
+      </text>
+    </g>
+    <g transform="translate(33)">
+      <text fill="#595959" font-family="SourceSansPro-Regular, Source Sans Pro" font-size="10">
+        <tspan x="617" y="34">Video - 1908</tspan>
+      </text>
+      <path stroke="#979797" stroke-linecap="square" d="M611.5,39.5 L611.5,23.3999996"/>
+      <text fill="#595959" font-family="SourceSansPro-Regular, Source Sans Pro" font-size="10">
+        <tspan x="538" y="34">Audio</tspan>
+      </text>
+      <path stroke="#979797" stroke-linecap="square" d="M532.5,39.5 L532.5,23.3999996"/>
+      <text fill="#595959" font-family="SourceSansPro-Regular, Source Sans Pro" font-size="10">
+        <tspan x="525" y="53">Images</tspan>
+      </text>
+      <path stroke="#979797" stroke-linecap="square" d="M519.5 58.5L519.5 42.3999996M238.5 39.5L238.5 23.3999996M39.5 58.5L39.5 42.3999996M1.5 39.5L1.5 23.3999996"/>
+    </g>
+  </g>
+</svg>
